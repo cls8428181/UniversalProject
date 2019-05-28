@@ -13,7 +13,6 @@
 #import "NJKWebViewProgress.h"
 #import "NJKWebViewProgressView.h"
 #import "UIColor+Hex.h"
-#import <LCProgressHUD.h>
 //#import "KNBUserInfo.h"
 //#import "KNUMManager.h"
 #import "KNGetUserLoaction.h"

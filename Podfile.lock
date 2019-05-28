@@ -15,7 +15,45 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Expecta (1.0.6)
-  - IQKeyboardManager (6.2.0)
+  - IQKeyboardManager (6.3.0)
+  - JZLocationConverter (1.0.0)
+  - LCProgressHUD (1.0.8):
+    - MBProgressHUD (~> 0.9.2)
+  - libextobjc (0.6):
+    - libextobjc/EXTADT (= 0.6)
+    - libextobjc/EXTConcreteProtocol (= 0.6)
+    - libextobjc/EXTKeyPathCoding (= 0.6)
+    - libextobjc/EXTNil (= 0.6)
+    - libextobjc/EXTSafeCategory (= 0.6)
+    - libextobjc/EXTScope (= 0.6)
+    - libextobjc/EXTSelectorChecking (= 0.6)
+    - libextobjc/EXTSynthesize (= 0.6)
+    - libextobjc/NSInvocation+EXT (= 0.6)
+    - libextobjc/NSMethodSignature+EXT (= 0.6)
+    - libextobjc/RuntimeExtensions (= 0.6)
+    - libextobjc/UmbrellaHeader (= 0.6)
+  - libextobjc/EXTADT (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTConcreteProtocol (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTKeyPathCoding (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTNil (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSafeCategory (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSelectorChecking (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSynthesize (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSInvocation+EXT (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSMethodSignature+EXT (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.6)
+  - libextobjc/UmbrellaHeader (0.6)
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
@@ -24,53 +62,50 @@ PODS:
   - Mantle/extobjc (2.1.0)
   - Masonry (1.0.2)
   - MBProgressHUD (0.9.2)
-  - MJRefresh (3.1.15.7)
-  - SDWebImage (4.4.2):
-    - SDWebImage/Core (= 4.4.2)
-  - SDWebImage/Core (4.4.2)
-  - TZImagePickerController (3.1.5)
+  - MJRefresh (3.2.0)
+  - pop (1.0.12)
+  - SDWebImage (5.0.2):
+    - SDWebImage/Core (= 5.0.2)
+  - SDWebImage/Core (5.0.2)
   - YTKNetwork (2.0.4):
     - AFNetworking (~> 3.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - Expecta
   - IQKeyboardManager
+  - JZLocationConverter
+  - LCProgressHUD
+  - libextobjc
   - MagicalRecord
   - Mantle
   - Masonry (~> 1.0.2)
   - MBProgressHUD (~> 0.9.2)
   - MJRefresh
+  - pop
   - SDWebImage
-  - TZImagePickerController
   - YTKNetwork
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - AFNetworking
-    - Expecta
-    - IQKeyboardManager
-    - MagicalRecord
-    - Mantle
-    - Masonry
-    - MBProgressHUD
-    - MJRefresh
-    - SDWebImage
-    - TZImagePickerController
-    - YTKNetwork
+  - YYKit
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
-  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  IQKeyboardManager: 2ca9d64893247556f53523dcd8d78641f0ba7c23
+  JZLocationConverter: 3d816bee6484aed9c155a6045a02ce444833e2f0
+  LCProgressHUD: c79809d917bf9cc1cd1cdfc4d91a44c8dbfa5692
+  libextobjc: aed8b7d2b07f511c1a7ecaacb33ea03e327c69b7
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
-  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
-  TZImagePickerController: 6cc6e9c1a73bb8e62cfef98fd40af2d90634dcf5
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 2c57275c560fcbfbec7ba4ed6bca9c25d577a402
+PODFILE CHECKSUM: 981a53607548052fdf0b2b890b82de0fe9cfc9cf
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.3.1

@@ -10,7 +10,6 @@
 #import "NSString+Contain.h"
 #import "NSString+Empty.h"
 #import "AppDelegate.h"
-#import "LCProgressHUD.h"
 #import <JZLocationConverter.h>
 
 NSString *const KNLocationCoordinate2D = @"KNLocationCoordinate2D"; // 经纬度对象
@@ -285,7 +284,7 @@ NSString *const KNSaveUserCurrentLocation = @"KNSaveUserCurrentLocation";      /
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (void)searchShopAddress:(NSString *)address {
     if (!address || address.length == 0) {
-        [LCProgressHUD showInfoMsg:@"地址不能为空!"];
+        [MBProgressHUD showInfoMessage:@"地址不能为空!"];
         return;
     }
     address = [address stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -294,7 +293,7 @@ NSString *const KNSaveUserCurrentLocation = @"KNSaveUserCurrentLocation";      /
     if ([[UIApplication sharedApplication] canOpenURL:addressUrl]) {
         [[UIApplication sharedApplication] openURL:addressUrl];
     } else {
-        [LCProgressHUD showFailure:@"地址错误!无法打开!"];
+        [MBProgressHUD showInfoMessage:@"地址错误!无法打开!"];
     }
 }
 #pragma clang diagnostic pop

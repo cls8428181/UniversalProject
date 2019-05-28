@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "KNBWelcomeViewController.h"
+#import "KNBLoginViewController.h"
+#import "XHLaunchAdManager.h"
+#import "CALayer+Transition.h"
+#import "KNPaypp.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<KNBWelcomeVCDelegate>
 
 @end
 
@@ -21,10 +26,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    //配置极光推送
-    [[KNBPushManager shareInstance] configureJPush:launchOptions];
-    // 配置文件
-    [[KNBAppManager shareInstance] configureThird];
+//    //配置极光推送
+//    [[KNBPushManager shareInstance] configureJPush:launchOptions];
+//    // 配置文件
+//    [[KNBAppManager shareInstance] configureThird];
     //引导页
     [self showPageGuideView];
     return YES;
@@ -61,12 +66,12 @@
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [[KNBPushManager shareInstance] registerDeviceToken:deviceToken];
+//    [[KNBPushManager shareInstance] registerDeviceToken:deviceToken];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
-    [[KNBPushManager shareInstance] handleRemoteNotification:userInfo];
+//    [[KNBPushManager shareInstance] handleRemoteNotification:userInfo];
     // Required, iOS 7 Support
     completionHandler(UIBackgroundFetchResultNewData);
 }

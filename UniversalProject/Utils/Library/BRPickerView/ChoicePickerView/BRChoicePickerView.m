@@ -8,7 +8,6 @@
 
 #import "BRChoicePickerView.h"
 #import "KNBChoiceTableViewCell.h"
-#import "KNBRecruitmentTypeModel.h"
 
 @interface BRChoicePickerView ()<UITableViewDelegate, UITableViewDataSource>
 //标签视图
@@ -75,20 +74,19 @@
     return self.dataArray.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    KNBRecruitmentUnitModel *model = self.dataArray[indexPath.row];
-    KNBChoiceTableViewCell *cell = [KNBChoiceTableViewCell cellWithTableView:tableView title:model.name];
-
-    return cell;
-}
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    KNBRecruitmentUnitModel *model = self.dataArray[indexPath.row];
+//    KNBChoiceTableViewCell *cell = [KNBChoiceTableViewCell cellWithTableView:tableView title:model.name];
+//
+//    return cell;
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 50;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    KNBRecruitmentUnitModel *model = self.dataArray[indexPath.row];
-    self.selectValue = model.name;
+
 }
 
 #pragma mark - 初始化子视图
@@ -161,13 +159,7 @@
     [self dismissWithAnimation:YES];
     // 点击确定按钮后，执行block回调
     if(_resultBlock) {
-        for (int i = 0; i < self.dataArray.count; i++) {
-            KNBRecruitmentUnitModel *model = self.dataArray[i];
-            if ([self.selectValue isEqualToString:model.name]) {
-                NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:model,@"model", nil];
-                _resultBlock(dict);
-            }
-        }
+
     }
 }
 

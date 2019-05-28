@@ -7,7 +7,6 @@
 //
 
 #import "KNBBaseViewController.h"
-#import <LCProgressHUD.h>
 #import "NSString+HTML.h"
 
 @interface KNBBaseViewController ()
@@ -208,7 +207,7 @@
         NSString *sharTitle = [messages[0] stringByConvertingHTMLToPlainText];
         NSString *shareContent = [messages[1] stringByDecodingHTMLEntities];
         
-        [[KNUMManager shareInstance] showShareViewWithShareInfoTitle:sharTitle shareImage:image desc:shareContent currentViewController:self];
+//        [[KNUMManager shareInstance] showShareViewWithShareInfoTitle:sharTitle shareImage:image desc:shareContent currentViewController:self];
     }
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import "KNBUserInfo.h"
-#import "KNBPushManager.h"
+//#import "KNBPushManager.h"
 //#import "DateTools.h"
 static NSString *const KNB_USER_LOGINSUCCESS = @"KNB_USER_LOGINSUCCESS";
 // 版本更新判断是否重新登录
@@ -70,7 +70,7 @@ KNB_DEFINE_SINGLETON_FOR_CLASS(KNBUserInfo);
     if (update && !isNullStr(dic[KNB_USER_TOKEN])) { // 缓存一份userToken
         [[NSUserDefaults standardUserDefaults] setObject:dic[KNB_USER_TOKEN] forKey:KNB_USER_CACHETOKEN];
     }
-    [[KNBPushManager shareInstance] settingRegistrationID];
+//    [[KNBPushManager shareInstance] settingRegistrationID];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

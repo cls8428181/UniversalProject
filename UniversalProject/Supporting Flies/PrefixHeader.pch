@@ -11,25 +11,49 @@
 
 #ifdef __OBJC__
 
+//全局宏
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "KNBPrecompile.h"
+#import "UtilsMacros.h"
+#import "URLMacros.h"
+#import "FontAndColorMacros.h"
+#import "ThirdMacros.h"
+#import "CommonMacros.h"
+
+//基础类
+#import "AppDelegate.h"
+#import "AppDelegate+AppService.h"
+//#import "RootViewController.h"
+//#import "RootNavigationController.h"
+#import "MBProgressHUD+XY.h"
+//#import "PPNetworkHelper.h"
+//#import "AppManager.h"
+//#import "ShareManager.h"
+//#import "UserManager.h"
+//#import "IMManager.h"
+//#import "UIButton+XYButton.h"
+
+//第三方
+#import <YYKit.h>
+#import <MBProgressHUD.h>
 #import <Masonry.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <LCProgressHUD.h>
+
+#import "KNBPrecompile.h"
 #import "UIView+Frame.h"
 #import "UIColor+Hex.h"
 //#import <ReactiveObjC.h>
 #import <IQKeyboardManager.h>
-#import <LCProgressHUD.h>
 #import "KNBUtilExtend.h"
-#import "AppDelegate.h"
 #import "KNBUserInfo.h"
 #import "KNGetUserLoaction.h"
 #import "KNBDataEmptySet.h"
 #import "KNUMManager.h"
-#import <Pingpp.h>
+//#import <Pingpp.h>
 #import <UIImageView+WebCache.h>
 #import <UIButton+WebCache.h>
-#import "KNBAlertRemind.h"
+//#import "KNBAlertRemind.h"
 
 // 环境配置 0：本地测试 1:正式环境 2:线上测试
 #define KNB_ENV_TYPE 2

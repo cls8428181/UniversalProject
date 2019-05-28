@@ -7,7 +7,6 @@
 //
 
 #import "BRLinkagePickerView.h"
-#import "KNBRecruitmentTypeModel.h"
 
 @interface BRLinkagePickerView ()<UIPickerViewDelegate,UIPickerViewDataSource>
 {
@@ -93,12 +92,7 @@
         self.dataArray = modelArray;
         for (int i = 0; i < modelArray.count; i++) {
             NSMutableArray *subArray = [NSMutableArray array];
-            KNBRecruitmentTypeModel *model = modelArray[i];
-            for (int j = 0; j < model.childList.count; j++) {
-                KNBRecruitmentTypeModel *subModel = model.childList[j];
-                [subArray addObject:subModel.catName];
-            }
-            [dataDic setObject:subArray forKey:model.catName];
+
         }
     } else {
         dataDic = [NSMutableDictionary dictionaryWithDictionary:dataSource];
@@ -180,12 +174,7 @@
     if (component == 0) {
         return self.dataArray.count;
     } else {
-        if (!isNullArray(self.dataArray)) {
-            KNBRecruitmentTypeModel *model = self.dataArray[self.selectRow];
-            return model.childList.count;
-        } else {
-            return 1;
-        }
+        return 1;
     }
 }
 
@@ -194,9 +183,6 @@
     if (component == 0) {
         self.selectRow = row;
         [self.selectValueArr removeAllObjects];
-        KNBRecruitmentTypeModel *model = self.dataArray[self.selectRow];
-        [self.selectValueArr insertObject:model atIndex:0];
-        [self.selectValueArr insertObject:model.childList.firstObject atIndex:1];
         [pickerView reloadComponent:1];
         [pickerView selectRow:0 inComponent:1 animated:NO];
     } else {
@@ -207,7 +193,6 @@
         if (self.selectValueArr.count > 1) {
             [self.selectValueArr removeLastObject];
         }
-        [self.selectValueArr insertObject:model.childList[row] atIndex:1];
     }
     
     // 设置是否自动回调
@@ -238,16 +223,9 @@
     // 自适应最小字体缩放比例
     label.minimumScaleFactor = 0.5f;
     if (component == 0) {
-        KNBRecruitmentTypeModel *model = self.dataArray[row];
-        label.text = model.catName;
+
     } else {
-        if (!isNullArray(self.dataArray)) {
-            KNBRecruitmentTypeModel *model = self.dataArray[self.selectRow];
-            KNBRecruitmentTypeModel *subModel = model.childList[row];
-            label.text = subModel.catName;
-        } else {
-            label.text = @"";
-        }
+        label.text = @"";
     }
     return label;
 }
@@ -281,7 +259,6 @@
         if (isNullArray(self.selectValueArr)) {
             KNBRecruitmentTypeModel *model = self.dataArray[0];
             [self.selectValueArr insertObject:model atIndex:0];
-            [self.selectValueArr insertObject:model.childList.firstObject atIndex:1];
         }
         _resultBlock(self.selectValueArr);
     }

@@ -10,7 +10,6 @@
 #import "CQTopBarSegment.h"
 #import "CQTopBarView.h"
 #import "CQTopBarSegmentCell.h"
-#import "KNBHomeCompanyTagsViewController.h"
 
 @interface CQTopBarViewController ()<CQTopBarSegmentDelegate,CQTopBarViewDelegate>
 @property (nonatomic,strong) CQTopBarSegment * segment;
@@ -50,25 +49,6 @@ const NSUInteger segmentH = 40;
     for (int i=0; i<self.pageViewClasses.count; i++) {
         Class controllerClass = self.pageViewClasses[i];
         UIViewController *controller = [[controllerClass alloc] init];
-        if (self.model) {
-            if (i == 0) {
-                KNBHomeCompanyTagsViewController *tagsVC = (KNBHomeCompanyTagsViewController *)controller;
-                tagsVC.model = self.model;
-            }
-        }
-        if (self.areaId) {
-            if (i == 1) {
-                KNBHomeCompanyTagsViewController *tagsVC = (KNBHomeCompanyTagsViewController *)controller;
-                tagsVC.areaId = self.areaId;
-            }
-        }
-        
-        if (self.isDesign) {
-            if (i == 0) {
-                KNBHomeCompanyTagsViewController *tagsVC = (KNBHomeCompanyTagsViewController *)controller;
-                tagsVC.isDesign = self.isDesign;
-            }
-        }
 
         [self addChildViewController:controller];
         [self.barView.viewArray addObject:controller.view];

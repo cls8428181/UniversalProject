@@ -8,6 +8,7 @@
 
 #import "FMTagsView.h"
 #import "LXCollectionViewLeftOrRightAlignedLayout.h"
+#import <objc/runtime.h>
 
 static NSString *const kTagCellID = @"TagCellID";
 

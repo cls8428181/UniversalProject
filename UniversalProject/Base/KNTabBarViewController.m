@@ -96,11 +96,6 @@ const NSInteger KNTabBarButtonTitleLabelTag = 666;
 #pragma mark - Private Method
 - (void)creatViewControllers {
     self.homeVC = [[HomeViewController alloc] init];
-    self.designSketchVC = [[DesignSketchViewController alloc] init];
-    self.designSketchVC.isTabbar = YES;
-    self.orderFinishingVC = [[OrderFinishingViewController alloc] init];
-    self.recruitmentVC = [[RecruitmentViewController alloc] init];
-    self.meVC = [[MeViewController alloc] init];
     self.viewControllers = self.vcs;
 
     NSInteger selectImgCount = self.selectImgArray.count;
@@ -203,11 +198,7 @@ const NSInteger KNTabBarButtonTitleLabelTag = 666;
 
 - (NSArray *)unSelectImgArray {
     if (!_unSelectImgArray) {
-        _unSelectImgArray = @[ @"knb_tabbar_home_unselect",
-                               @"knb_tabbar_design_unselect",
-                               @"knb_tabbar_appointment",
-                               @"knb_tabbar_business_unselect",
-                               @"knb_tabbar_me_unselect"
+        _unSelectImgArray = @[ @"knb_tabbar_home_unselect"
                                ];
     }
     return _unSelectImgArray;
@@ -215,11 +206,7 @@ const NSInteger KNTabBarButtonTitleLabelTag = 666;
 
 - (NSArray *)selectImgArray {
     if (!_selectImgArray) {
-        _selectImgArray = @[ @"knb_tabbar_home_select",
-                             @"knb_tabbar_design_select",
-                             @"knb_tabbar_appointment",
-                             @"knb_tabbar_business_select",
-                             @"knb_tabbar_me_select"
+        _selectImgArray = @[ @"knb_tabbar_home_select"
                              ];
     }
     return _selectImgArray;
@@ -227,7 +214,7 @@ const NSInteger KNTabBarButtonTitleLabelTag = 666;
 
 - (NSArray *)vcs {
     if (!_vcs) {
-        _vcs = @[ self.homeVC, self.designSketchVC, self.orderFinishingVC, self.recruitmentVC, self.meVC ];
+        _vcs = @[ self.homeVC ];
     }
     return _vcs;
 }

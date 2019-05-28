@@ -33,9 +33,8 @@
 #import "SDCollectionViewCell.h"
 #import "UIView+SDExtension.h"
 #import "TAPageControl.h"
-#import "SDImageCache.h"
-
-
+#import "SDWebImageManager.h"
+#import "UIImageView+WebCache.h"
 
 NSString * const ID = @"cycleCell";
 
@@ -415,7 +414,7 @@ NSString * const ID = @"cycleCell";
 
 + (void)clearImagesCache
 {
-    [[[SDWebImageManager sharedManager] imageCache] clearDiskOnCompletion:^{
+    [[[SDWebImageManager sharedManager] imageCache] clearWithCacheType:SDImageCacheTypeDisk completion:^{
         
     }];
 }

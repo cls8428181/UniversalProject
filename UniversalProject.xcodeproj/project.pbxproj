@@ -151,6 +151,38 @@
 		185FBF03229D59AA00C351A6 /* WSLWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBEB1229D59AA00C351A6 /* WSLWaterFlowLayout.m */; };
 		185FBF04229D59AA00C351A6 /* CustomIOSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBEB5229D59AA00C351A6 /* CustomIOSAlertView.m */; };
 		5360FB7B39DF4A1507ECAD22 /* libPods-UniversalProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD1E6E367053D29D17BC0B5 /* libPods-UniversalProject.a */; };
+		961C054B229D8341009C14C6 /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C0545229D8340009C14C6 /* ShareView.m */; };
+		961C054C229D8341009C14C6 /* ImageWithLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C0549229D8340009C14C6 /* ImageWithLabels.m */; };
+		961C054D229D8341009C14C6 /* ImageWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C054A229D8340009C14C6 /* ImageWithLabel.m */; };
+		961C0551229D85F0009C14C6 /* MBProgressHUD+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C0550229D85F0009C14C6 /* MBProgressHUD+XY.m */; };
+		961C0557229D8AC2009C14C6 /* KNBWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C0553229D8AC1009C14C6 /* KNBWelcomeViewController.m */; };
+		961C0558229D8AC2009C14C6 /* KNBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C0555229D8AC2009C14C6 /* KNBLoginViewController.m */; };
+		961C055B229D8AEE009C14C6 /* KNBLoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C055A229D8AEE009C14C6 /* KNBLoginInputView.m */; };
+		961C0561229D8BEE009C14C6 /* KNBStartPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 961C055E229D8BEE009C14C6 /* KNBStartPageView.xib */; };
+		961C0562229D8BEE009C14C6 /* KNBStartPage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 961C055F229D8BEE009C14C6 /* KNBStartPage.plist */; };
+		961C0563229D8BEE009C14C6 /* KNBStartPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C0560229D8BEE009C14C6 /* KNBStartPageView.m */; };
+		961C0592229D90D5009C14C6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961C0591229D90D5009C14C6 /* CoreMotion.framework */; };
+		9686BFDB229D793000524A6D /* WaterFallListLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686BFB2229D793000524A6D /* WaterFallListLogic.m */; };
+		9686BFDC229D793000524A6D /* PersonListLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686BFB4229D793000524A6D /* PersonListLogic.m */; };
+		9686BFDD229D793000524A6D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686BFB7229D793000524A6D /* HomeViewController.m */; };
+		9686BFE1229D793000524A6D /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686BFC0229D793000524A6D /* PersonModel.m */; };
+		9686BFE6229D793000524A6D /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFCD229D793000524A6D /* 8.jpg */; };
+		9686BFE7229D793000524A6D /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFCE229D793000524A6D /* 9.jpg */; };
+		9686BFE8229D793000524A6D /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFCF229D793000524A6D /* 12.jpg */; };
+		9686BFE9229D793000524A6D /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFD0229D793000524A6D /* 13.jpg */; };
+		9686BFEA229D793000524A6D /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFD1229D793000524A6D /* 11.jpg */; };
+		9686BFEB229D793000524A6D /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFD2229D793000524A6D /* 10.jpg */; };
+		9686BFEC229D793000524A6D /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFD3229D793000524A6D /* 4.jpg */; };
+		9686BFED229D793000524A6D /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFD4229D793000524A6D /* 5.jpg */; };
+		9686BFEE229D793000524A6D /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFD5229D793000524A6D /* 7.jpg */; };
+		9686BFEF229D793000524A6D /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFD6229D793000524A6D /* 6.jpg */; };
+		9686BFF0229D793000524A6D /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFD7229D793000524A6D /* 2.jpg */; };
+		9686BFF1229D793000524A6D /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFD8229D793000524A6D /* 3.jpg */; };
+		9686BFF2229D793000524A6D /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFD9229D793000524A6D /* 1.jpg */; };
+		9686BFF3229D793000524A6D /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFDA229D793000524A6D /* 0.jpg */; };
+		9686BFF6229D7AF900524A6D /* KNBCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686BFF4229D7AF800524A6D /* KNBCityModel.m */; };
+		9686BFFA229D7BB400524A6D /* KNBNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686BFF9229D7BB400524A6D /* KNBNavigationView.m */; };
+		9686BFFD229D7BC600524A6D /* KNUMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686BFFC229D7BC600524A6D /* KNUMManager.m */; };
 		C39990061A1F8378A2B49AB8 /* libPods-UniversalProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F371EEAA1D46CD25F5F9CAE /* libPods-UniversalProjectTests.a */; };
 /* End PBXBuildFile section */
 
@@ -455,10 +487,66 @@
 		185FBEB2229D59AA00C351A6 /* WSLWaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLWaterFlowLayout.h; sourceTree = "<group>"; };
 		185FBEB4229D59AA00C351A6 /* CustomIOSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOSAlertView.h; sourceTree = "<group>"; };
 		185FBEB5229D59AA00C351A6 /* CustomIOSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOSAlertView.m; sourceTree = "<group>"; };
+		2AA6546B22B827B07DFFE349 /* Pods-UniversalProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversalProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UniversalProjectTests/Pods-UniversalProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DC98D48DAE5120CF5E11288 /* Pods-UniversalProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversalProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-UniversalProjectTests/Pods-UniversalProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F371EEAA1D46CD25F5F9CAE /* libPods-UniversalProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UniversalProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FA7C0F3A7580345986A74D5 /* Pods-UniversalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UniversalProject/Pods-UniversalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		596EFFE60CD7B8324D393819 /* Pods-UniversalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversalProject.debug.xcconfig"; path = "Target Support Files/Pods-UniversalProject/Pods-UniversalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		6AD1E6E367053D29D17BC0B5 /* libPods-UniversalProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UniversalProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F478D956FCBE09B82172C14 /* Pods-UniversalProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversalProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniversalProjectTests/Pods-UniversalProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		961C0540229D81BF009C14C6 /* CommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
+		961C0541229D81BF009C14C6 /* FontAndColorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAndColorMacros.h; sourceTree = "<group>"; };
+		961C0542229D81BF009C14C6 /* ThirdMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdMacros.h; sourceTree = "<group>"; };
+		961C0543229D81BF009C14C6 /* URLMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLMacros.h; sourceTree = "<group>"; };
+		961C0544229D81BF009C14C6 /* UtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacros.h; sourceTree = "<group>"; };
+		961C0545229D8340009C14C6 /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareView.m; sourceTree = "<group>"; };
+		961C0546229D8340009C14C6 /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareView.h; sourceTree = "<group>"; };
+		961C0547229D8340009C14C6 /* ImageWithLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageWithLabel.h; sourceTree = "<group>"; };
+		961C0548229D8340009C14C6 /* ImageWithLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageWithLabels.h; sourceTree = "<group>"; };
+		961C0549229D8340009C14C6 /* ImageWithLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageWithLabels.m; sourceTree = "<group>"; };
+		961C054A229D8340009C14C6 /* ImageWithLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageWithLabel.m; sourceTree = "<group>"; };
+		961C054F229D85F0009C14C6 /* MBProgressHUD+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+XY.h"; sourceTree = "<group>"; };
+		961C0550229D85F0009C14C6 /* MBProgressHUD+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+XY.m"; sourceTree = "<group>"; };
+		961C0553229D8AC1009C14C6 /* KNBWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBWelcomeViewController.m; sourceTree = "<group>"; };
+		961C0554229D8AC1009C14C6 /* KNBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBLoginViewController.h; sourceTree = "<group>"; };
+		961C0555229D8AC2009C14C6 /* KNBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBLoginViewController.m; sourceTree = "<group>"; };
+		961C0556229D8AC2009C14C6 /* KNBWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBWelcomeViewController.h; sourceTree = "<group>"; };
+		961C0559229D8AEE009C14C6 /* KNBLoginInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBLoginInputView.h; sourceTree = "<group>"; };
+		961C055A229D8AEE009C14C6 /* KNBLoginInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBLoginInputView.m; sourceTree = "<group>"; };
+		961C055D229D8BEE009C14C6 /* KNBStartPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBStartPageView.h; sourceTree = "<group>"; };
+		961C055E229D8BEE009C14C6 /* KNBStartPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KNBStartPageView.xib; sourceTree = "<group>"; };
+		961C055F229D8BEE009C14C6 /* KNBStartPage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KNBStartPage.plist; sourceTree = "<group>"; };
+		961C0560229D8BEE009C14C6 /* KNBStartPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBStartPageView.m; sourceTree = "<group>"; };
+		961C0591229D90D5009C14C6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		9686BFB2229D793000524A6D /* WaterFallListLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFallListLogic.m; sourceTree = "<group>"; };
+		9686BFB3229D793000524A6D /* PersonListLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonListLogic.h; sourceTree = "<group>"; };
+		9686BFB4229D793000524A6D /* PersonListLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonListLogic.m; sourceTree = "<group>"; };
+		9686BFB5229D793000524A6D /* WaterFallListLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFallListLogic.h; sourceTree = "<group>"; };
+		9686BFB7229D793000524A6D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		9686BFBB229D793000524A6D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		9686BFC0229D793000524A6D /* PersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonModel.m; sourceTree = "<group>"; };
+		9686BFC1229D793000524A6D /* PersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		9686BFCD229D793000524A6D /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		9686BFCE229D793000524A6D /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		9686BFCF229D793000524A6D /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
+		9686BFD0229D793000524A6D /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
+		9686BFD1229D793000524A6D /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		9686BFD2229D793000524A6D /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		9686BFD3229D793000524A6D /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		9686BFD4229D793000524A6D /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		9686BFD5229D793000524A6D /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		9686BFD6229D793000524A6D /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		9686BFD7229D793000524A6D /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		9686BFD8229D793000524A6D /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		9686BFD9229D793000524A6D /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		9686BFDA229D793000524A6D /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+		9686BFF4229D7AF800524A6D /* KNBCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBCityModel.m; sourceTree = "<group>"; };
+		9686BFF5229D7AF900524A6D /* KNBCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBCityModel.h; sourceTree = "<group>"; };
+		9686BFF8229D7BB400524A6D /* KNBNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBNavigationView.h; sourceTree = "<group>"; };
+		9686BFF9229D7BB400524A6D /* KNBNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBNavigationView.m; sourceTree = "<group>"; };
+		9686BFFB229D7BC600524A6D /* KNUMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNUMManager.h; sourceTree = "<group>"; };
+		9686BFFC229D7BC600524A6D /* KNUMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNUMManager.m; sourceTree = "<group>"; };
+		AE5248397A7C09B94F6A3EB2 /* Pods-UniversalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniversalProject/Pods-UniversalProject.release.xcconfig"; sourceTree = "<group>"; };
 		D9D916819319E797D718D4D7 /* Pods-UniversalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversalProject.release.xcconfig"; path = "Target Support Files/Pods-UniversalProject/Pods-UniversalProject.release.xcconfig"; sourceTree = "<group>"; };
 		FC01429CD4416909EB37399C /* Pods-UniversalProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversalProjectTests.release.xcconfig"; path = "Target Support Files/Pods-UniversalProjectTests/Pods-UniversalProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -468,6 +556,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				961C0592229D90D5009C14C6 /* CoreMotion.framework in Frameworks */,
 				185FBED9229D59AA00C351A6 /* libSocialQQ.a in Frameworks */,
 				185FBED6229D59AA00C351A6 /* libSocialSMS.a in Frameworks */,
 				185FBEED229D59AA00C351A6 /* libWeChatSDK.a in Frameworks */,
@@ -508,6 +597,10 @@
 				D9D916819319E797D718D4D7 /* Pods-UniversalProject.release.xcconfig */,
 				3DC98D48DAE5120CF5E11288 /* Pods-UniversalProjectTests.debug.xcconfig */,
 				FC01429CD4416909EB37399C /* Pods-UniversalProjectTests.release.xcconfig */,
+				4FA7C0F3A7580345986A74D5 /* Pods-UniversalProject.debug.xcconfig */,
+				AE5248397A7C09B94F6A3EB2 /* Pods-UniversalProject.release.xcconfig */,
+				2AA6546B22B827B07DFFE349 /* Pods-UniversalProjectTests.debug.xcconfig */,
+				8F478D956FCBE09B82172C14 /* Pods-UniversalProjectTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -612,6 +705,8 @@
 		185FBD2B229D505D00C351A6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				961C0552229D8AA0009C14C6 /* Login(登录) */,
+				9686BFB0229D793000524A6D /* Home(首页) */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -619,6 +714,11 @@
 		185FBD2D229D508000C351A6 /* Define */ = {
 			isa = PBXGroup;
 			children = (
+				961C0540229D81BF009C14C6 /* CommonMacros.h */,
+				961C0541229D81BF009C14C6 /* FontAndColorMacros.h */,
+				961C0542229D81BF009C14C6 /* ThirdMacros.h */,
+				961C0543229D81BF009C14C6 /* URLMacros.h */,
+				961C0544229D81BF009C14C6 /* UtilsMacros.h */,
 				185FBD3D229D560D00C351A6 /* KNBPrecompile.h */,
 				185FBD3C229D560D00C351A6 /* KNBUtilExtend.h */,
 			);
@@ -628,6 +728,14 @@
 		185FBD2E229D509200C351A6 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				961C0547229D8340009C14C6 /* ImageWithLabel.h */,
+				961C054A229D8340009C14C6 /* ImageWithLabel.m */,
+				961C0548229D8340009C14C6 /* ImageWithLabels.h */,
+				961C0549229D8340009C14C6 /* ImageWithLabels.m */,
+				961C0546229D8340009C14C6 /* ShareView.h */,
+				961C0545229D8340009C14C6 /* ShareView.m */,
+				9686BFFB229D7BC600524A6D /* KNUMManager.h */,
+				9686BFFC229D7BC600524A6D /* KNUMManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -655,6 +763,8 @@
 		185FBD31229D50EB00C351A6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				961C055C229D8BEE009C14C6 /* KNBGuidePage */,
+				9686BFF7229D7BB400524A6D /* KNBNavigationView */,
 				185FBDED229D590000C351A6 /* KNBUserInfo */,
 				185FBDF0229D590000C351A6 /* KNUserLocation */,
 				185FBD33229D519B00C351A6 /* Category */,
@@ -672,7 +782,6 @@
 				185FBE27229D59A900C351A6 /* FMTagsView */,
 				185FBE8E229D59AA00C351A6 /* GHDropMenu */,
 				185FBE2A229D59A900C351A6 /* HMSegmentedControl */,
-				185FBE8D229D59AA00C351A6 /* JQScrollNumberLabel */,
 				185FBE14229D59A900C351A6 /* KNBDataEmpty */,
 				185FBDF5229D59A900C351A6 /* KNBLaunchAd */,
 				185FBE71229D59A900C351A6 /* KNPaypp */,
@@ -689,6 +798,7 @@
 		185FBD33229D519B00C351A6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				961C054E229D85F0009C14C6 /* MBProgressHUD */,
 				185FBD72229D588100C351A6 /* CALayer */,
 				185FBD67229D588100C351A6 /* NSDate */,
 				185FBDAF229D588200C351A6 /* NSString */,
@@ -917,6 +1027,8 @@
 		185FBDF0229D590000C351A6 /* KNUserLocation */ = {
 			isa = PBXGroup;
 			children = (
+				9686BFF5229D7AF900524A6D /* KNBCityModel.h */,
+				9686BFF4229D7AF800524A6D /* KNBCityModel.m */,
 				185FBDF1229D590000C351A6 /* KNGetUserLoaction.h */,
 				185FBDF2229D590000C351A6 /* KNGetUserLoaction.m */,
 			);
@@ -1294,13 +1406,6 @@
 			path = PageControl;
 			sourceTree = "<group>";
 		};
-		185FBE8D229D59AA00C351A6 /* JQScrollNumberLabel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = JQScrollNumberLabel;
-			sourceTree = "<group>";
-		};
 		185FBE8E229D59AA00C351A6 /* GHDropMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -1390,10 +1495,130 @@
 		66E7632F454F57DE420C671F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				961C0591229D90D5009C14C6 /* CoreMotion.framework */,
 				6AD1E6E367053D29D17BC0B5 /* libPods-UniversalProject.a */,
 				3F371EEAA1D46CD25F5F9CAE /* libPods-UniversalProjectTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		961C054E229D85F0009C14C6 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				961C054F229D85F0009C14C6 /* MBProgressHUD+XY.h */,
+				961C0550229D85F0009C14C6 /* MBProgressHUD+XY.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		961C0552229D8AA0009C14C6 /* Login(登录) */ = {
+			isa = PBXGroup;
+			children = (
+				961C0559229D8AEE009C14C6 /* KNBLoginInputView.h */,
+				961C055A229D8AEE009C14C6 /* KNBLoginInputView.m */,
+				961C0554229D8AC1009C14C6 /* KNBLoginViewController.h */,
+				961C0555229D8AC2009C14C6 /* KNBLoginViewController.m */,
+				961C0556229D8AC2009C14C6 /* KNBWelcomeViewController.h */,
+				961C0553229D8AC1009C14C6 /* KNBWelcomeViewController.m */,
+			);
+			path = "Login(登录)";
+			sourceTree = "<group>";
+		};
+		961C055C229D8BEE009C14C6 /* KNBGuidePage */ = {
+			isa = PBXGroup;
+			children = (
+				961C055D229D8BEE009C14C6 /* KNBStartPageView.h */,
+				961C055E229D8BEE009C14C6 /* KNBStartPageView.xib */,
+				961C055F229D8BEE009C14C6 /* KNBStartPage.plist */,
+				961C0560229D8BEE009C14C6 /* KNBStartPageView.m */,
+			);
+			path = KNBGuidePage;
+			sourceTree = "<group>";
+		};
+		9686BFB0229D793000524A6D /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				9686BFB1229D793000524A6D /* Logic */,
+				9686BFB6229D793000524A6D /* Controller */,
+				9686BFBF229D793000524A6D /* Model */,
+				9686BFC2229D793000524A6D /* View */,
+				9686BFC9229D793000524A6D /* Service */,
+				9686BFCC229D793000524A6D /* Resource */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		9686BFB1229D793000524A6D /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				9686BFB2229D793000524A6D /* WaterFallListLogic.m */,
+				9686BFB3229D793000524A6D /* PersonListLogic.h */,
+				9686BFB4229D793000524A6D /* PersonListLogic.m */,
+				9686BFB5229D793000524A6D /* WaterFallListLogic.h */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		9686BFB6229D793000524A6D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9686BFBB229D793000524A6D /* HomeViewController.h */,
+				9686BFB7229D793000524A6D /* HomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9686BFBF229D793000524A6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9686BFC0229D793000524A6D /* PersonModel.m */,
+				9686BFC1229D793000524A6D /* PersonModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9686BFC2229D793000524A6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9686BFC9229D793000524A6D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9686BFCC229D793000524A6D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9686BFCD229D793000524A6D /* 8.jpg */,
+				9686BFCE229D793000524A6D /* 9.jpg */,
+				9686BFCF229D793000524A6D /* 12.jpg */,
+				9686BFD0229D793000524A6D /* 13.jpg */,
+				9686BFD1229D793000524A6D /* 11.jpg */,
+				9686BFD2229D793000524A6D /* 10.jpg */,
+				9686BFD3229D793000524A6D /* 4.jpg */,
+				9686BFD4229D793000524A6D /* 5.jpg */,
+				9686BFD5229D793000524A6D /* 7.jpg */,
+				9686BFD6229D793000524A6D /* 6.jpg */,
+				9686BFD7229D793000524A6D /* 2.jpg */,
+				9686BFD8229D793000524A6D /* 3.jpg */,
+				9686BFD9229D793000524A6D /* 1.jpg */,
+				9686BFDA229D793000524A6D /* 0.jpg */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		9686BFF7229D7BB400524A6D /* KNBNavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				9686BFF8229D7BB400524A6D /* KNBNavigationView.h */,
+				9686BFF9229D7BB400524A6D /* KNBNavigationView.m */,
+			);
+			path = KNBNavigationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1408,6 +1633,7 @@
 				185FBCEE229D2CCF00C351A6 /* Frameworks */,
 				185FBCEF229D2CCF00C351A6 /* Resources */,
 				3097BE3BF85CE4FD97EF7CF1 /* [CP] Copy Pods Resources */,
+				6D161AFBCBB9AF038C442ACF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1426,6 +1652,8 @@
 				185FBD08229D2CD100C351A6 /* Sources */,
 				185FBD09229D2CD100C351A6 /* Frameworks */,
 				185FBD0A229D2CD100C351A6 /* Resources */,
+				614106E279AA22D2CF34F9F7 /* [CP] Embed Pods Frameworks */,
+				9C64C02C1BC3FF270FFD2F19 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1502,12 +1730,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9686BFF3229D793000524A6D /* 0.jpg in Resources */,
+				961C0561229D8BEE009C14C6 /* KNBStartPageView.xib in Resources */,
+				961C0562229D8BEE009C14C6 /* KNBStartPage.plist in Resources */,
+				9686BFEF229D793000524A6D /* 6.jpg in Resources */,
+				9686BFEA229D793000524A6D /* 11.jpg in Resources */,
 				185FBD04229D2CD100C351A6 /* LaunchScreen.storyboard in Resources */,
+				9686BFE9229D793000524A6D /* 13.jpg in Resources */,
+				9686BFEC229D793000524A6D /* 4.jpg in Resources */,
 				185FBEE0229D59AA00C351A6 /* KNBChoiceTableViewCell.xib in Resources */,
+				9686BFF2229D793000524A6D /* 1.jpg in Resources */,
 				185FBEEA229D59AA00C351A6 /* AlipaySDK.bundle in Resources */,
+				9686BFE7229D793000524A6D /* 9.jpg in Resources */,
+				9686BFE6229D793000524A6D /* 8.jpg in Resources */,
+				9686BFF0229D793000524A6D /* 2.jpg in Resources */,
 				185FBEE7229D59AA00C351A6 /* BRPickerView.bundle in Resources */,
+				9686BFED229D793000524A6D /* 5.jpg in Resources */,
+				9686BFEE229D793000524A6D /* 7.jpg in Resources */,
+				9686BFEB229D793000524A6D /* 10.jpg in Resources */,
 				185FBD01229D2CD100C351A6 /* Assets.xcassets in Resources */,
+				9686BFF1229D793000524A6D /* 3.jpg in Resources */,
 				185FBED1229D59AA00C351A6 /* UMSocialSDKResources.bundle in Resources */,
+				9686BFE8229D793000524A6D /* 12.jpg in Resources */,
 				185FBEEC229D59AA00C351A6 /* README.txt in Resources */,
 				185FBEDA229D59AA00C351A6 /* UMSocialSDKPromptResources.bundle in Resources */,
 			);
@@ -1560,22 +1804,77 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UniversalProject/Pods-UniversalProject-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-UniversalProject/Pods-UniversalProject-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/LCProgressHUD/LCProgressHUD/LCProgressHUD.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UniversalProject/Pods-UniversalProject-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniversalProject/Pods-UniversalProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		614106E279AA22D2CF34F9F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniversalProjectTests/Pods-UniversalProjectTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D161AFBCBB9AF038C442ACF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniversalProject/Pods-UniversalProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C64C02C1BC3FF270FFD2F19 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniversalProjectTests/Pods-UniversalProjectTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9D9C02C1A62162800D4C75E5 /* [CP] Check Pods Manifest.lock */ = {
@@ -1613,9 +1912,11 @@
 				185FBDCB229D588200C351A6 /* UIButton+CountDown.m in Sources */,
 				185FBD5C229D585900C351A6 /* CCTextView.m in Sources */,
 				185FBEF8229D59AA00C351A6 /* NSArray+Bounds.m in Sources */,
+				961C054C229D8341009C14C6 /* ImageWithLabels.m in Sources */,
 				185FBEF5229D59AA00C351A6 /* GHWaterFallLabel.m in Sources */,
 				185FBDDE229D588200C351A6 /* UIImage+Size.m in Sources */,
 				185FBDE4229D588200C351A6 /* AlivcStringDrawing.m in Sources */,
+				9686BFDC229D793000524A6D /* PersonListLogic.m in Sources */,
 				185FBDD8229D588200C351A6 /* UIImageView+KNBImage.m in Sources */,
 				185FBEF3229D59AA00C351A6 /* TAAnimatedDotView.m in Sources */,
 				185FBEC7229D59AA00C351A6 /* CQTopBarView.m in Sources */,
@@ -1632,6 +1933,7 @@
 				185FBEBE229D59AA00C351A6 /* XHLaunchAdController.m in Sources */,
 				185FBEE9229D59AA00C351A6 /* KNPaypp.m in Sources */,
 				185FBEC0229D59AA00C351A6 /* XHLaunchAdImageView+XHLaunchAdCache.m in Sources */,
+				961C0558229D8AC2009C14C6 /* KNBLoginViewController.m in Sources */,
 				185FBDE7229D588200C351A6 /* NSString+HTML.m in Sources */,
 				185FBD59229D585900C351A6 /* KNTabBarViewController.m in Sources */,
 				185FBEE4229D59AA00C351A6 /* BRBaseView.m in Sources */,
@@ -1645,6 +1947,7 @@
 				185FBDCE229D588200C351A6 /* KNBButton.m in Sources */,
 				185FBDDB229D588200C351A6 /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				185FBDD5229D588200C351A6 /* UIResponder+Router.m in Sources */,
+				9686BFFA229D7BB400524A6D /* KNBNavigationView.m in Sources */,
 				185FBDCC229D588200C351A6 /* UIButton+ImageAndTitle.m in Sources */,
 				185FBF02229D59AA00C351A6 /* GHDropMenuFilterSectionHeader.m in Sources */,
 				185FBDDF229D588200C351A6 /* UIImage+WaterMark.m in Sources */,
@@ -1655,12 +1958,14 @@
 				185FBEBB229D59AA00C351A6 /* XHLaunchImageView.m in Sources */,
 				185FBD07229D2CD100C351A6 /* main.m in Sources */,
 				185FBEE8229D59AA00C351A6 /* BRAddressPickerView.m in Sources */,
+				9686BFE1229D793000524A6D /* PersonModel.m in Sources */,
 				185FBEF9229D59AA00C351A6 /* UIView+Extension.m in Sources */,
 				185FBD58229D585900C351A6 /* KNBBaseViewController.m in Sources */,
 				185FBDD4229D588200C351A6 /* UITextField+Shake.m in Sources */,
 				185FBDEB229D588200C351A6 /* GTMNSString+HTML.m in Sources */,
 				185FBD5A229D585900C351A6 /* CCTextField.m in Sources */,
 				185FBEFB229D59AA00C351A6 /* GHDropMenuOptionCell.m in Sources */,
+				961C054D229D8341009C14C6 /* ImageWithLabel.m in Sources */,
 				185FBEF2229D59AA00C351A6 /* TAPageControl.m in Sources */,
 				185FBF03229D59AA00C351A6 /* WSLWaterFlowLayout.m in Sources */,
 				185FBEE5229D59AA00C351A6 /* KNBAddressPickerView.m in Sources */,
@@ -1669,15 +1974,19 @@
 				185FBDEA229D588200C351A6 /* NSString+Size.m in Sources */,
 				185FBDDC229D588200C351A6 /* UIColor+Hex.m in Sources */,
 				185FBDF3229D590000C351A6 /* KNBUserInfo.m in Sources */,
+				961C0563229D8BEE009C14C6 /* KNBStartPageView.m in Sources */,
+				9686BFFD229D7BC600524A6D /* KNUMManager.m in Sources */,
 				185FBDC8229D588200C351A6 /* UIView+Frame.m in Sources */,
 				185FBEF1229D59AA00C351A6 /* TADotView.m in Sources */,
 				185FBEBF229D59AA00C351A6 /* XHLaunchAdDownloader.m in Sources */,
 				185FBEF0229D59AA00C351A6 /* SDCollectionViewCell.m in Sources */,
 				185FBECD229D59AA00C351A6 /* HMSegmentedControl.m in Sources */,
 				185FBEE1229D59AA00C351A6 /* BRTagsPickerView.m in Sources */,
+				961C054B229D8341009C14C6 /* ShareView.m in Sources */,
 				185FBDD0229D588200C351A6 /* UIButton+Indicator.m in Sources */,
 				185FBF01229D59AA00C351A6 /* GHDropMenuModel.m in Sources */,
 				185FBECA229D59AA00C351A6 /* CQTopBarViewController.m in Sources */,
+				9686BFDB229D793000524A6D /* WaterFallListLogic.m in Sources */,
 				185FBEF4229D59AA00C351A6 /* TAAbstractDotView.m in Sources */,
 				185FBECB229D59AA00C351A6 /* CQTopBarSegment.m in Sources */,
 				185FBEFC229D59AA00C351A6 /* GHDropMenuFilterSingleInputItem.m in Sources */,
@@ -1700,6 +2009,7 @@
 				185FBD39229D54AA00C351A6 /* AppDelegate+PushService.m in Sources */,
 				185FBDC7229D588200C351A6 /* UIView+Utils.m in Sources */,
 				185FBECE229D59AA00C351A6 /* PrintBeautifulLog.m in Sources */,
+				9686BFF6229D7AF900524A6D /* KNBCityModel.m in Sources */,
 				185FBDC5229D588200C351A6 /* KNBScrollTextView.m in Sources */,
 				185FBEC6229D59AA00C351A6 /* NJKWebViewProgressView.m in Sources */,
 				185FBEBD229D59AA00C351A6 /* XHLaunchAd.m in Sources */,
@@ -1708,10 +2018,13 @@
 				185FBEFE229D59AA00C351A6 /* GHDropMenuFilterTagItem.m in Sources */,
 				185FBF00229D59AA00C351A6 /* GHDropMenuTitleItem.m in Sources */,
 				185FBDE2229D588200C351A6 /* UIImage+RoundedCorner.m in Sources */,
+				9686BFDD229D793000524A6D /* HomeViewController.m in Sources */,
+				961C0557229D8AC2009C14C6 /* KNBWelcomeViewController.m in Sources */,
 				185FBEDC229D59AA00C351A6 /* BRLinkagePickerView.m in Sources */,
 				185FBDE3229D588200C351A6 /* UIImage+Resize.m in Sources */,
 				185FBEB6229D59AA00C351A6 /* FLAnimatedImage.m in Sources */,
 				185FBEC5229D59AA00C351A6 /* NJKWebViewProgress.m in Sources */,
+				961C055B229D8AEE009C14C6 /* KNBLoginInputView.m in Sources */,
 				185FBEFA229D59AA00C351A6 /* GHDropMenu.m in Sources */,
 				185FBEC8229D59AA00C351A6 /* CQSegmentTitleImage.m in Sources */,
 				185FBDC4229D588200C351A6 /* UITextView+ZWPlaceHolder.m in Sources */,
@@ -1727,6 +2040,7 @@
 				185FBDE8229D588200C351A6 /* NSString+Empty.m in Sources */,
 				185FBDD7229D588200C351A6 /* UIImageView+Addition.m in Sources */,
 				185FBEDD229D59AA00C351A6 /* BRStringPickerView.m in Sources */,
+				961C0551229D85F0009C14C6 /* MBProgressHUD+XY.m in Sources */,
 				185FBF04229D59AA00C351A6 /* CustomIOSAlertView.m in Sources */,
 				185FBDE0229D588200C351A6 /* UIImage+QRCode.m in Sources */,
 			);
@@ -1777,6 +2091,7 @@
 /* Begin XCBuildConfiguration section */
 		185FBD1E229D2CD100C351A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 596EFFE60CD7B8324D393819 /* Pods-UniversalProject.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1836,6 +2151,7 @@
 		};
 		185FBD1F229D2CD100C351A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9D916819319E797D718D4D7 /* Pods-UniversalProject.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1889,7 +2205,7 @@
 		};
 		185FBD21229D2CD100C351A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 596EFFE60CD7B8324D393819 /* Pods-UniversalProject.debug.xcconfig */;
+			baseConfigurationReference = 4FA7C0F3A7580345986A74D5 /* Pods-UniversalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1900,7 +2216,8 @@
 					"$(PROJECT_DIR)/UniversalProject/Utils/Library/UMSocial/analytics_ios_5.5.1",
 					"$(PROJECT_DIR)/UniversalProject/Utils/Library/KNPaypp/AliPay",
 				);
-				INFOPLIST_FILE = UniversalProject/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/UniversalProject/Supporting Flies/PrefixHeader.pch";
+				INFOPLIST_FILE = "UniversalProject/Supporting Flies/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1922,7 +2239,7 @@
 		};
 		185FBD22229D2CD100C351A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9D916819319E797D718D4D7 /* Pods-UniversalProject.release.xcconfig */;
+			baseConfigurationReference = AE5248397A7C09B94F6A3EB2 /* Pods-UniversalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1933,7 +2250,8 @@
 					"$(PROJECT_DIR)/UniversalProject/Utils/Library/UMSocial/analytics_ios_5.5.1",
 					"$(PROJECT_DIR)/UniversalProject/Utils/Library/KNPaypp/AliPay",
 				);
-				INFOPLIST_FILE = UniversalProject/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/UniversalProject/Supporting Flies/PrefixHeader.pch";
+				INFOPLIST_FILE = "UniversalProject/Supporting Flies/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1955,7 +2273,7 @@
 		};
 		185FBD24229D2CD100C351A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DC98D48DAE5120CF5E11288 /* Pods-UniversalProjectTests.debug.xcconfig */;
+			baseConfigurationReference = 2AA6546B22B827B07DFFE349 /* Pods-UniversalProjectTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1974,7 +2292,7 @@
 		};
 		185FBD25229D2CD100C351A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC01429CD4416909EB37399C /* Pods-UniversalProjectTests.release.xcconfig */;
+			baseConfigurationReference = 8F478D956FCBE09B82172C14 /* Pods-UniversalProjectTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate+AppService.h"
-#import <UMSocialCore/UMSocialCore.h>
-#import "LoginViewController.h"
-#import "OpenUDID.h"
+//#import <UMSocialCore/UMSocialCore.h>
+//#import "LoginViewController.h"
+//#import "OpenUDID.h"
 #import <YTKNetwork.h>
 
 @implementation AppDelegate (AppService)
@@ -51,94 +51,94 @@
 
 #pragma mark ————— 初始化用户系统 —————
 -(void)initUserManager{
-    DLog(@"设备IMEI ：%@",[OpenUDID value]);
-    if([userManager loadUserInfo]){
-        
-        //如果有本地数据，先展示TabBar 随后异步自动登录
-        self.mainTabBar = [MainTabBarController new];
-        self.window.rootViewController = self.mainTabBar;
-        
-        //自动登录
-        [userManager autoLoginToServer:^(BOOL success, NSString *des) {
-            if (success) {
-                DLog(@"自动登录成功");
-                //                    [MBProgressHUD showSuccessMessage:@"自动登录成功"];
-                KPostNotification(KNotificationAutoLoginSuccess, nil);
-            }else{
-                [MBProgressHUD showErrorMessage:NSStringFormat(@"自动登录失败：%@",des)];
-            }
-        }];
-        
-    }else{
-        //没有登录过，展示登录页面
-        KPostNotification(KNotificationLoginStateChange, @NO)
-//        [MBProgressHUD showErrorMessage:@"需要登录"];
-    }
+//    DLog(@"设备IMEI ：%@",[OpenUDID value]);
+//    if([userManager loadUserInfo]){
+//
+//        //如果有本地数据，先展示TabBar 随后异步自动登录
+//        self.mainTabBar = [MainTabBarController new];
+//        self.window.rootViewController = self.mainTabBar;
+//
+//        //自动登录
+//        [userManager autoLoginToServer:^(BOOL success, NSString *des) {
+//            if (success) {
+//                DLog(@"自动登录成功");
+//                //                    [MBProgressHUD showSuccessMessage:@"自动登录成功"];
+//                KPostNotification(KNotificationAutoLoginSuccess, nil);
+//            }else{
+//                [MBProgressHUD showErrorMessage:NSStringFormat(@"自动登录失败：%@",des)];
+//            }
+//        }];
+//
+//    }else{
+//        //没有登录过，展示登录页面
+//        KPostNotification(KNotificationLoginStateChange, @NO)
+////        [MBProgressHUD showErrorMessage:@"需要登录"];
+//    }
 }
 
 #pragma mark ————— 登录状态处理 —————
 - (void)loginStateChange:(NSNotification *)notification
 {
-    BOOL loginSuccess = [notification.object boolValue];
-    
-    if (loginSuccess) {//登陆成功加载主窗口控制器
-        
-        //为避免自动登录成功刷新tabbar
-        if (!self.mainTabBar || ![self.window.rootViewController isKindOfClass:[MainTabBarController class]]) {
-            self.mainTabBar = [MainTabBarController new];
-
-            CATransition *anima = [CATransition animation];
-            anima.type = @"cube";//设置动画的类型
-            anima.subtype = kCATransitionFromRight; //设置动画的方向
-            anima.duration = 0.3f;
-            
-            self.window.rootViewController = self.mainTabBar;
-            
-            [kAppWindow.layer addAnimation:anima forKey:@"revealAnimation"];
-            
-        }
-        
-    }else {//登陆失败加载登陆页面控制器
-        
-        self.mainTabBar = nil;
-        RootNavigationController *loginNavi =[[RootNavigationController alloc] initWithRootViewController:[LoginViewController new]];
-        
-        CATransition *anima = [CATransition animation];
-        anima.type = @"fade";//设置动画的类型
-        anima.subtype = kCATransitionFromRight; //设置动画的方向
-        anima.duration = 0.3f;
-        
-        self.window.rootViewController = loginNavi;
-        
-        [kAppWindow.layer addAnimation:anima forKey:@"revealAnimation"];
-        
-    }
-    //展示FPS
-    [AppManager showFPS];
+//    BOOL loginSuccess = [notification.object boolValue];
+//
+//    if (loginSuccess) {//登陆成功加载主窗口控制器
+//
+//        //为避免自动登录成功刷新tabbar
+//        if (!self.mainTabBar || ![self.window.rootViewController isKindOfClass:[MainTabBarController class]]) {
+//            self.mainTabBar = [MainTabBarController new];
+//
+//            CATransition *anima = [CATransition animation];
+//            anima.type = @"cube";//设置动画的类型
+//            anima.subtype = kCATransitionFromRight; //设置动画的方向
+//            anima.duration = 0.3f;
+//
+//            self.window.rootViewController = self.mainTabBar;
+//
+//            [kAppWindow.layer addAnimation:anima forKey:@"revealAnimation"];
+//
+//        }
+//
+//    }else {//登陆失败加载登陆页面控制器
+//
+//        self.mainTabBar = nil;
+//        RootNavigationController *loginNavi =[[RootNavigationController alloc] initWithRootViewController:[LoginViewController new]];
+//
+//        CATransition *anima = [CATransition animation];
+//        anima.type = @"fade";//设置动画的类型
+//        anima.subtype = kCATransitionFromRight; //设置动画的方向
+//        anima.duration = 0.3f;
+//
+//        self.window.rootViewController = loginNavi;
+//
+//        [kAppWindow.layer addAnimation:anima forKey:@"revealAnimation"];
+//
+//    }
+//    //展示FPS
+//    [AppManager showFPS];
 }
 
 
 #pragma mark ————— 网络状态变化 —————
 - (void)netWorkStateChange:(NSNotification *)notification
 {
-    BOOL isNetWork = [notification.object boolValue];
-    
-    if (isNetWork) {//有网络
-        if ([userManager loadUserInfo] && !isLogin) {//有用户数据 并且 未登录成功 重新来一次自动登录
-            [userManager autoLoginToServer:^(BOOL success, NSString *des) {
-                if (success) {
-                    DLog(@"网络改变后，自动登录成功");
-//                    [MBProgressHUD showSuccessMessage:@"网络改变后，自动登录成功"];
-                    KPostNotification(KNotificationAutoLoginSuccess, nil);
-                }else{
-                    [MBProgressHUD showErrorMessage:NSStringFormat(@"自动登录失败：%@",des)];
-                }
-            }];
-        }
-        
-    }else {//登陆失败加载登陆页面控制器
-        [MBProgressHUD showTopTipMessage:@"网络状态不佳" isWindow:YES];
-    }
+//    BOOL isNetWork = [notification.object boolValue];
+//
+//    if (isNetWork) {//有网络
+//        if ([userManager loadUserInfo] && !isLogin) {//有用户数据 并且 未登录成功 重新来一次自动登录
+//            [userManager autoLoginToServer:^(BOOL success, NSString *des) {
+//                if (success) {
+//                    DLog(@"网络改变后，自动登录成功");
+////                    [MBProgressHUD showSuccessMessage:@"网络改变后，自动登录成功"];
+//                    KPostNotification(KNotificationAutoLoginSuccess, nil);
+//                }else{
+//                    [MBProgressHUD showErrorMessage:NSStringFormat(@"自动登录失败：%@",des)];
+//                }
+//            }];
+//        }
+//
+//    }else {//登陆失败加载登陆页面控制器
+//        [MBProgressHUD showTopTipMessage:@"网络状态不佳" isWindow:YES];
+//    }
 }
 
 
@@ -205,29 +205,29 @@
 #pragma mark ————— 网络状态监听 —————
 - (void)monitorNetworkStatus
 {
-    // 网络状态改变一次, networkStatusWithBlock就会响应一次
-    [PPNetworkHelper networkStatusWithBlock:^(PPNetworkStatusType networkStatus) {
-        
-        switch (networkStatus) {
-                // 未知网络
-            case PPNetworkStatusUnknown:
-                DLog(@"网络环境：未知网络");
-                // 无网络
-            case PPNetworkStatusNotReachable:
-                DLog(@"网络环境：无网络");
-                KPostNotification(KNotificationNetWorkStateChange, @NO);
-                break;
-                // 手机网络
-            case PPNetworkStatusReachableViaWWAN:
-                DLog(@"网络环境：手机自带网络");
-                // 无线网络
-            case PPNetworkStatusReachableViaWiFi:
-                DLog(@"网络环境：WiFi");
-                KPostNotification(KNotificationNetWorkStateChange, @YES);
-                break;
-        }
-        
-    }];
+//    // 网络状态改变一次, networkStatusWithBlock就会响应一次
+//    [PPNetworkHelper networkStatusWithBlock:^(PPNetworkStatusType networkStatus) {
+//        
+//        switch (networkStatus) {
+//                // 未知网络
+//            case PPNetworkStatusUnknown:
+//                DLog(@"网络环境：未知网络");
+//                // 无网络
+//            case PPNetworkStatusNotReachable:
+//                DLog(@"网络环境：无网络");
+//                KPostNotification(KNotificationNetWorkStateChange, @NO);
+//                break;
+//                // 手机网络
+//            case PPNetworkStatusReachableViaWWAN:
+//                DLog(@"网络环境：手机自带网络");
+//                // 无线网络
+//            case PPNetworkStatusReachableViaWiFi:
+//                DLog(@"网络环境：WiFi");
+//                KPostNotification(KNotificationNetWorkStateChange, @YES);
+//                break;
+//        }
+//        
+//    }];
     
 }
 
