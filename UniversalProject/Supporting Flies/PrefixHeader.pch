@@ -1,0 +1,82 @@
+//
+//  PrefixHeader.pch
+//  UniversalProject
+//
+//  Created by apple on 2019/5/28.
+//  Copyright © 2019 apple. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "KNBPrecompile.h"
+#import <Masonry.h>
+#import "UIView+Frame.h"
+#import "UIColor+Hex.h"
+//#import <ReactiveObjC.h>
+#import <IQKeyboardManager.h>
+#import <LCProgressHUD.h>
+#import "KNBUtilExtend.h"
+#import "AppDelegate.h"
+#import "KNBUserInfo.h"
+#import "KNGetUserLoaction.h"
+#import "KNBDataEmptySet.h"
+#import "KNUMManager.h"
+#import <Pingpp.h>
+#import <UIImageView+WebCache.h>
+#import <UIButton+WebCache.h>
+#import "KNBAlertRemind.h"
+
+// 环境配置 0：本地测试 1:正式环境 2:线上测试
+#define KNB_ENV_TYPE 2
+
+#if (KNB_ENV_TYPE == 0) // 本地环境
+#define KNB_MAINCONFIGURL @"http://192.168.1.110"
+#elif (KNB_ENV_TYPE == 1) // 线上正式
+#define KNB_MAINCONFIGURL @"https://jiekou1.idengyun.com"
+#else  // 线上测试
+#define KNB_MAINCONFIGURL @"http://dayuapp.idayu.cn/index.php?s="
+#endif
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__);
+#else
+#define NSLog(...)
+#endif
+
+//本地记录版本号 用于判断是否展示引导页
+#define VERSION_INFO_CURRENT @"currentversion"
+//提交单元测试结果成功的通知
+#define KNB_UPEXERCISERESULT_SUCCESS @"KNB_UPEXERCISERESULT_SUCCESS"
+//定时器超时通知
+#define KNBTimerTimeOutNotification @"KNBTimerTimeOutNotification"
+//收到推送消息通知
+#define KNBNewMessageCommingNotification @"KNBNewMessageCommingNotification"
+
+// 有关支付的配置信息
+#define KN_PayCodeWX @"wx" // 微信
+#define KN_PayCodeAlipay @"alipay" // 支付宝
+#define KN_AlipyUrlScheme  @"KNBAlipay"
+#define KN_WXUrlScheme  @"wx"
+#define KN_WeixinAppId  @"wx59d8ae90819ba21f"
+
+// 导航服务器地址
+#define KN_NaviServerUrl  @"https://import.idengyun.com:8082"
+// 文件服务器地址
+#define KN_FileServerUrl  @"https://import.idengyun.com:8086"
+
+// 根据6/6s设计图等比例适配
+#define KNB_SCREEN_ASPECT_RATIO_H(height) (KNB_SCREEN_WIDTH / 375.0) * height
+#define KNB_SCREEN_ASPECT_RATIO_W(width) (KNB_SCREEN_HEIGHT / 667.0) * width
+
+typedef NS_ENUM(NSInteger, KNTraingErrorCode) {
+    KNTraingError_token = -1, // token过期
+    KNTraingError_update = 10017,// 强制更新
+};
+
+#endif
+#endif /* PrefixHeader_pch */
