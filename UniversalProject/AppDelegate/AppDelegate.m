@@ -78,7 +78,7 @@
     if ([visibleVC isKindOfClass:[KNBLoginViewController class]]) {
         return;
     }
-    [KNB_AppDelegate.tabBarController turnToControllerIndex:0]; //跳转到首页
+    [kAppDelegate.tabBarController turnToControllerIndex:0]; //跳转到首页
     KNBLoginViewController *loginVC = [[KNBLoginViewController alloc] init];
     loginVC.vcType = KNBLoginTypeLogin;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];

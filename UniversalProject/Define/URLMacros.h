@@ -24,6 +24,8 @@
  这样做切换方便,不用来回每个网络请求修改请求域名,降低出错事件
  */
 
+// 环境配置 0：本地测试 1:正式环境 2:线上测试
+
 #define DevelopSever    1
 #define TestSever       0
 #define ProductSever    0

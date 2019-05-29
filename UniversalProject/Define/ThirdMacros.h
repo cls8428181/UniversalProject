@@ -33,4 +33,11 @@
 #define kIMAppSecret @"c34bd403b29a"
 #define kIMPushCerName @""
 
+// 有关支付的配置信息
+#define KN_PayCodeWX @"wx" // 微信
+#define KN_PayCodeAlipay @"alipay" // 支付宝
+#define KN_AlipyUrlScheme  @"KNBAlipay"
+#define KN_WXUrlScheme  @"wx"
+#define KN_WeixinAppId  @"wx59d8ae90819ba21f"
+
 #endif /* ThirdMacros_h */

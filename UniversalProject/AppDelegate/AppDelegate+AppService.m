@@ -49,7 +49,7 @@
 #pragma mark ————— 初始化网络配置 —————
 -(void)NetWorkConfig{
     YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
-    config.baseUrl = KNB_MAINCONFIGURL;
+    config.baseUrl = URL_main;
     //https 公匙
     NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"https" ofType:@"cer"];
     NSData * certData =[NSData dataWithContentsOfFile:cerPath];
@@ -267,7 +267,7 @@
 #pragma mark-- KNBWelcomeVCDelegate
 - (void)isShowGuidePageViewComplete {
     self.tabBarController = [[MainTabBarViewController alloc] init];
-    self.navController = [[KNBNavgationController alloc] initWithRootViewController:self.tabBarController];
+    self.navController = [[RootNavgationController alloc] initWithRootViewController:self.tabBarController];
     self.window.rootViewController = self.navController;
     [self.window.layer transitionWithAnimType:TransitionAnimTypePageCurl subType:TransitionSubtypesFromRight curve:TransitionCurveEaseInEaseOut duration:0.5f];
 }

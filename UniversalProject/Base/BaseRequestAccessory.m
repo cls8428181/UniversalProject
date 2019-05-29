@@ -35,11 +35,11 @@
         
         [LCProgressHUD hide];
         [userManager logout:^(BOOL success, NSString *des) {
-            [KNB_AppDelegate.navController popToRootViewControllerAnimated:NO];
-            [MainTabBarVC turnToControllerIndex:KNB_AppDelegate.tabBarController.lastSelectIndex];
+            [kAppDelegate.navController popToRootViewControllerAnimated:NO];
+            [kMainTabBarVC turnToControllerIndex:kAppDelegate.tabBarController.lastSelectIndex];
             KNBLoginViewController *logInVC = [[KNBLoginViewController alloc] init];
             UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:logInVC];
-            [KNB_AppDelegate.navController presentViewController:navigationVC animated:YES completion:nil];
+            [kAppDelegate.navController presentViewController:navigationVC animated:YES completion:nil];
             //        [KNBAlertRemind alterWithTitle:@"提示" message:@"登录信息已失效,请重新登录" buttonTitles:@[ @"知道了" ] handler:^(NSInteger index, NSString *title){
             //
             //        }];

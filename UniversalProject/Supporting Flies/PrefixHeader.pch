@@ -27,7 +27,9 @@
 #import "UIViewController+AlertViewAndActionSheet.h"
 #import "UICollectionView+IndexPath.h"
 #import "MBProgressHUD+XY.h"
-//#import "PPNetworkHelper.h"
+#import "MainTabBarViewController.h"
+#import "RootNavgationController.h"
+#import "PPNetworkHelper.h"
 #import "AppManager.h"
 #import "LocationManager.h"
 #import "ShareManager.h"
@@ -56,17 +58,6 @@
 #import <UIButton+WebCache.h>
 //#import "KNBAlertRemind.h"
 
-// 环境配置 0：本地测试 1:正式环境 2:线上测试
-#define KNB_ENV_TYPE 2
-
-#if (KNB_ENV_TYPE == 0) // 本地环境
-#define KNB_MAINCONFIGURL @"http://192.168.1.110"
-#elif (KNB_ENV_TYPE == 1) // 线上正式
-#define KNB_MAINCONFIGURL @"https://jiekou1.idengyun.com"
-#else  // 线上测试
-#define KNB_MAINCONFIGURL @"http://dayuapp.idayu.cn/index.php?s="
-#endif
-
 #ifdef DEBUG
 #define NSLog(...) NSLog(__VA_ARGS__);
 #else
@@ -81,13 +72,6 @@
 #define KNBTimerTimeOutNotification @"KNBTimerTimeOutNotification"
 //收到推送消息通知
 #define KNBNewMessageCommingNotification @"KNBNewMessageCommingNotification"
-
-// 有关支付的配置信息
-#define KN_PayCodeWX @"wx" // 微信
-#define KN_PayCodeAlipay @"alipay" // 支付宝
-#define KN_AlipyUrlScheme  @"KNBAlipay"
-#define KN_WXUrlScheme  @"wx"
-#define KN_WeixinAppId  @"wx59d8ae90819ba21f"
 
 // 导航服务器地址
 #define KN_NaviServerUrl  @"https://import.idengyun.com:8082"

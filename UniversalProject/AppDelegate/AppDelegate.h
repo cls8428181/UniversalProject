@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "KNBNavgationController.h"
+#import "RootNavgationController.h"
 #import "MainTabBarViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) MainTabBarViewController *tabBarController;
-@property (strong, nonatomic) KNBNavgationController *navController;
+@property (strong, nonatomic) RootNavgationController *navController;
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
 - (void)saveContext;

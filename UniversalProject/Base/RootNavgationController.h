@@ -1,5 +1,5 @@
 //
-//  KNBNavgationController.h
+//  RootNavgationController.h
 //  KenuoTraining
 //
 //  Created by 吴申超 on 16/2/25.
@@ -10,7 +10,7 @@
 /**
  导航控制器基类
  */
-@interface KNBNavgationController : UINavigationController
+@interface RootNavgationController : UINavigationController
 
 /*!
  *  返回到指定的类视图

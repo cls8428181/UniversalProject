@@ -1,17 +1,17 @@
 //
-//  KNBNavgationController.m
+//  RootNavgationController.m
 //  KenuoTraining
 //
 //  Created by 吴申超 on 16/2/25.
 //  Copyright © 2016年 Robert. All rights reserved.
 //
 
-#import "KNBNavgationController.h"
+#import "RootNavgationController.h"
 #import "BaseViewController.h"
 #import "XYTransitionProtocol.h"
 #import "XYTransition.h"
 
-@interface KNBNavgationController () <UIGestureRecognizerDelegate, UINavigationControllerDelegate>
+@interface RootNavgationController () <UIGestureRecognizerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) NSArray *nameControllerArray;
 @property (nonatomic, weak) id popDelegate;
 @property (nonatomic,strong) UIPercentDrivenInteractiveTransition *interactivePopTransition;
@@ -20,7 +20,7 @@
 @end
 
 
-@implementation KNBNavgationController
+@implementation RootNavgationController
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self setNavigationBarHidden:YES];

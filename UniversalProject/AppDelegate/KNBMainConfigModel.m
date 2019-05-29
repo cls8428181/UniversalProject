@@ -96,7 +96,7 @@ NSString *const KNBOrder_AlipayPay = @"/Api/Payment/createOrderByAlipay";       
 KNB_DEFINE_SINGLETON_FOR_CLASS(KNBMainConfigModel);
 
 - (NSString *)getRequestUrlWithKey:(NSString *)key {
-    NSString *url = [NSString stringWithFormat:@"%@%@",KNB_MAINCONFIGURL,key];;
+    NSString *url = [NSString stringWithFormat:@"%@%@",URL_main,key];;
     if (!isNullStr(url)) {
         //除去地址两端的空格
         return [url stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];

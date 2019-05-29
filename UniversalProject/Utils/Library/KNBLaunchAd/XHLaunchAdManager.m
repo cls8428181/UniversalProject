@@ -100,7 +100,7 @@
     if (!isNullStr(linkUrl)) {
         BaseWebViewController *webVC = [[BaseWebViewController alloc] init];
         webVC.url = linkUrl;
-        [KNB_AppDelegate.navController pushViewController:webVC animated:YES];
+        [kAppDelegate.navController pushViewController:webVC animated:YES];
     }
 }
 

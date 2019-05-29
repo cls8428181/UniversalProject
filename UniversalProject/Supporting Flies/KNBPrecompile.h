@@ -9,11 +9,6 @@
 #ifndef KNBPrecompile_h
 #define KNBPrecompile_h
 
-//主代理
-#define KNB_AppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
-//全局tabBar
-#define MainTabBarVC (MainTabBarViewController *)KNB_AppDelegate.tabBarController
-
 //单例宏定义.h
 #define KNB_DEFINE_SINGLETON_FOR_HEADER(className) \
                                                    \

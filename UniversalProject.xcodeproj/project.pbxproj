@@ -46,6 +46,7 @@
 		184E2C5C229E9038004FE4F9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E2C5B229E9038004FE4F9 /* libz.tbd */; };
 		184E2C5E229E90E1004FE4F9 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E2C5D229E90E1004FE4F9 /* Photos.framework */; };
 		184E2C60229E90F2004FE4F9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E2C5F229E90F2004FE4F9 /* ImageIO.framework */; };
+		184E2C64229E98DB004FE4F9 /* KNBAlertRemind.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2C63229E98DB004FE4F9 /* KNBAlertRemind.m */; };
 		185FBCF6229D2CCF00C351A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBCF5229D2CCF00C351A6 /* AppDelegate.m */; };
 		185FBCFF229D2CCF00C351A6 /* UniversalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 185FBCFD229D2CCF00C351A6 /* UniversalProject.xcdatamodeld */; };
 		185FBD01229D2CD100C351A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185FBD00229D2CD100C351A6 /* Assets.xcassets */; };
@@ -62,7 +63,7 @@
 		185FBD58229D585900C351A6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD46229D585800C351A6 /* BaseViewController.m */; };
 		185FBD59229D585900C351A6 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD48229D585800C351A6 /* MainTabBarViewController.m */; };
 		185FBD5A229D585900C351A6 /* CCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD49229D585900C351A6 /* CCTextField.m */; };
-		185FBD5B229D585900C351A6 /* KNBNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD4C229D585900C351A6 /* KNBNavgationController.m */; };
+		185FBD5B229D585900C351A6 /* RootNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD4C229D585900C351A6 /* RootNavgationController.m */; };
 		185FBD5C229D585900C351A6 /* CCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD51229D585900C351A6 /* CCTextView.m */; };
 		185FBD5D229D585900C351A6 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD52229D585900C351A6 /* BaseRequest.m */; };
 		185FBD5E229D585900C351A6 /* BaseRequestAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD53229D585900C351A6 /* BaseRequestAccessory.m */; };
@@ -294,6 +295,8 @@
 		184E2C5B229E9038004FE4F9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		184E2C5D229E90E1004FE4F9 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		184E2C5F229E90F2004FE4F9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		184E2C62229E98D4004FE4F9 /* KNBAlertRemind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBAlertRemind.h; sourceTree = "<group>"; };
+		184E2C63229E98DB004FE4F9 /* KNBAlertRemind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBAlertRemind.m; sourceTree = "<group>"; };
 		185FBCF1229D2CCF00C351A6 /* UniversalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniversalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185FBCF4229D2CCF00C351A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		185FBCF5229D2CCF00C351A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -320,7 +323,7 @@
 		185FBD41229D585800C351A6 /* KNOCJSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNOCJSModel.h; sourceTree = "<group>"; };
 		185FBD42229D585800C351A6 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		185FBD43229D585800C351A6 /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
-		185FBD44229D585800C351A6 /* KNBNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBNavgationController.h; sourceTree = "<group>"; };
+		185FBD44229D585800C351A6 /* RootNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavgationController.h; sourceTree = "<group>"; };
 		185FBD45229D585800C351A6 /* KNOCJSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNOCJSModel.m; sourceTree = "<group>"; };
 		185FBD46229D585800C351A6 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		185FBD47229D585800C351A6 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
@@ -328,7 +331,7 @@
 		185FBD49229D585900C351A6 /* CCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTextField.m; sourceTree = "<group>"; };
 		185FBD4A229D585900C351A6 /* CCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTextView.h; sourceTree = "<group>"; };
 		185FBD4B229D585900C351A6 /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
-		185FBD4C229D585900C351A6 /* KNBNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBNavgationController.m; sourceTree = "<group>"; };
+		185FBD4C229D585900C351A6 /* RootNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavgationController.m; sourceTree = "<group>"; };
 		185FBD4D229D585900C351A6 /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
 		185FBD4E229D585900C351A6 /* BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
 		185FBD4F229D585900C351A6 /* CCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTextField.h; sourceTree = "<group>"; };
@@ -879,6 +882,15 @@
 			path = AES;
 			sourceTree = "<group>";
 		};
+		184E2C61229E98BA004FE4F9 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				184E2C62229E98D4004FE4F9 /* KNBAlertRemind.h */,
+				184E2C63229E98DB004FE4F9 /* KNBAlertRemind.m */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
 		185FBCE8229D2CCF00C351A6 = {
 			isa = PBXGroup;
 			children = (
@@ -965,8 +977,8 @@
 				185FBD53229D585900C351A6 /* BaseRequestAccessory.m */,
 				185FBD50229D585900C351A6 /* BaseViewController.h */,
 				185FBD46229D585800C351A6 /* BaseViewController.m */,
-				185FBD44229D585800C351A6 /* KNBNavgationController.h */,
-				185FBD4C229D585900C351A6 /* KNBNavgationController.m */,
+				185FBD44229D585800C351A6 /* RootNavgationController.h */,
+				185FBD4C229D585900C351A6 /* RootNavgationController.m */,
 				185FBD41229D585800C351A6 /* KNOCJSModel.h */,
 				185FBD45229D585800C351A6 /* KNOCJSModel.m */,
 				185FBD4D229D585900C351A6 /* MainTabBarViewController.h */,
@@ -1040,6 +1052,7 @@
 		185FBD31229D50EB00C351A6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				184E2C61229E98BA004FE4F9 /* AlertView */,
 				961C055C229D8BEE009C14C6 /* KNBGuidePage */,
 				9686BFF7229D7BB400524A6D /* KNBNavigationView */,
 				185FBD33229D519B00C351A6 /* Category */,
@@ -2097,6 +2110,7 @@
 				185FBDCF229D588200C351A6 /* UIButton+EnlargeArea.m in Sources */,
 				185FBEBB229D59AA00C351A6 /* XHLaunchImageView.m in Sources */,
 				185FBD07229D2CD100C351A6 /* main.m in Sources */,
+				184E2C64229E98DB004FE4F9 /* KNBAlertRemind.m in Sources */,
 				185FBEE8229D59AA00C351A6 /* BRAddressPickerView.m in Sources */,
 				9686BFE1229D793000524A6D /* PersonModel.m in Sources */,
 				185FBEF9229D59AA00C351A6 /* UIView+Extension.m in Sources */,
@@ -2158,7 +2172,7 @@
 				185FBDC5229D588200C351A6 /* KNBScrollTextView.m in Sources */,
 				185FBEC6229D59AA00C351A6 /* NJKWebViewProgressView.m in Sources */,
 				185FBEBD229D59AA00C351A6 /* XHLaunchAd.m in Sources */,
-				185FBD5B229D585900C351A6 /* KNBNavgationController.m in Sources */,
+				185FBD5B229D585900C351A6 /* RootNavgationController.m in Sources */,
 				185FBDD6229D588200C351A6 /* UIImageView+FaceAwareFill.m in Sources */,
 				185FBEFE229D59AA00C351A6 /* GHDropMenuFilterTagItem.m in Sources */,
 				185FBF00229D59AA00C351A6 /* GHDropMenuTitleItem.m in Sources */,
