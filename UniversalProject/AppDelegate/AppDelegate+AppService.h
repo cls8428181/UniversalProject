@@ -15,25 +15,49 @@
  */
 @interface AppDelegate (AppService)
 
-//初始化服务
+/**
+ 初始化服务
+ */
 -(void)initService;
 
-//初始化 window
+/**
+ 初始化 window
+ */
 -(void)initWindow;
 
-//初始化 UMeng
+/**
+ 初始化 UMeng
+ */
 -(void)initUMeng;
 
-//初始化用户系统
+/**
+ 初始化用户系统
+ */
 -(void)initUserManager;
 
-//监听网络状态
+/**
+ 引导页
+ */
+- (void)showPageGuideView;
+
+/**
+ 监听网络状态
+ */
 - (void)monitorNetworkStatus;
 
-//初始化网络配置
+/**
+ 初始化网络配置
+ */
 -(void)NetWorkConfig;
 
-//单例
+/**
+ * 配置数据库
+ */
+- (void)configureCoreDataPath;
+
+/**
+ 单例
+ */
 + (AppDelegate *)shareAppDelegate;
 
 /**

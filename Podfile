@@ -27,6 +27,7 @@ target 'UniversalProject' do
 #    pod 'Pingpp', '~> 2.2.10'
 #    pod 'Pingpp/Alipay'
 #    pod 'Pingpp/Wx'
+    pod 'JPush'
     pod 'JZLocationConverter'
     pod 'YYKit'
 end

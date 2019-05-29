@@ -11,8 +11,14 @@
 #ifndef ThirdMacros_h
 #define ThirdMacros_h
 
-// 友盟统计
-#define UMengKey @"59281b4a5312dd3f5f0005ed"
+// 友盟AppKey
+#define UMengKey @"5cc29b4e570df3c1d2000860"
+#define KN_WeixinAppId @"wx59d8ae90819ba21f"
+#define KN_WeixinAppSecret @"314f7e172448d2e4c43fae1644eecc05"
+#define KN_WeiboAppId @"2319923337"
+#define KN_WeiboAppSecret @"609e2e4c0801e6233f85056059f3b4c2"
+#define KN_QQAppId @"101564573"
+#define KN_QQAppSecret @"tV0Fmd0yOwvHt3fr"
 
 //微信
 #define kAppKey_Wechat          @"wx38ae805374bd9c73"

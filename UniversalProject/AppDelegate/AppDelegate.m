@@ -9,9 +9,9 @@
 #import "AppDelegate.h"
 #import "KNBWelcomeViewController.h"
 #import "KNBLoginViewController.h"
-#import "XHLaunchAdManager.h"
 #import "CALayer+Transition.h"
 #import "KNPaypp.h"
+#import "KNBWelcomeViewController.h"
 
 @interface AppDelegate ()<KNBWelcomeVCDelegate>
 
@@ -21,33 +21,53 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-//    //配置极光推送
-//    [[KNBPushManager shareInstance] configureJPush:launchOptions];
-//    // 配置文件
-//    [[KNBAppManager shareInstance] configureThird];
+    
+    //初始化window
+    [self initWindow];
+    
     //引导页
     [self showPageGuideView];
+    
+    //初始化网络请求配置
+    [self NetWorkConfig];
+    
+    //UMeng初始化
+    [self initUMeng];
+    
+    //初始化app服务
+    [self initService];
+    
+    //初始化IM
+    [[IMManager sharedIMManager] initIM];
+    
+    //配置极光推送
+    [self configureJPush:launchOptions];
+    
+    // 配置微信支付
+    [KNPaypp registerWxApp:KN_WeixinAppId];
+    
+    // 定位
+    [userLocationManager startLocation];
+    
+    //配置友盟分享
+    [ShareManager sharedShareManager];
+    
+    //配置高德地图
+//    [AMapServices sharedServices].apiKey = AMapKey;
+    
+    //初始化用户系统
+    [self initUserManager];
+    
+    //网络监听
+    [self monitorNetworkStatus];
+    
+    //广告页
+//    [AppManager appStart];
+    
+    //开启键盘控制
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     return YES;
-}
-
-/**
- *  引导页
- */
-- (void)showPageGuideView {
-    if ([KNBWelcomeViewController isShowGuideView]) {
-        KNBWelcomeViewController *welcomeVC = [[KNBWelcomeViewController alloc] init];
-        welcomeVC.delegate = self;
-        self.window.rootViewController = welcomeVC;
-    } else {
-        [self isShowGuidePageViewComplete];
-        //配置广告图
-        [XHLaunchAdManager shareManager];
-    }
 }
 
 /**
@@ -66,22 +86,14 @@
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-//    [[KNBPushManager shareInstance] registerDeviceToken:deviceToken];
+    [self registerDeviceToken:deviceToken];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
-//    [[KNBPushManager shareInstance] handleRemoteNotification:userInfo];
+    [self handleRemoteNotification:userInfo];
     // Required, iOS 7 Support
     completionHandler(UIBackgroundFetchResultNewData);
-}
-
-#pragma mark-- KNBWelcomeVCDelegate
-- (void)isShowGuidePageViewComplete {
-    self.tabBarController = [[KNTabBarViewController alloc] init];
-    self.navController = [[KNBNavgationController alloc] initWithRootViewController:self.tabBarController];
-    self.window.rootViewController = self.navController;
-    [self.window.layer transitionWithAnimType:TransitionAnimTypePageCurl subType:TransitionSubtypesFromRight curve:TransitionCurveEaseInEaseOut duration:0.5f];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -180,3 +192,4 @@
 }
 
 @end
+

@@ -23,15 +23,17 @@
 //基础类
 #import "AppDelegate.h"
 #import "AppDelegate+AppService.h"
-//#import "RootViewController.h"
-//#import "RootNavigationController.h"
+#import "AppDelegate+PushService.h"
+#import "UIViewController+AlertViewAndActionSheet.h"
+#import "UICollectionView+IndexPath.h"
 #import "MBProgressHUD+XY.h"
 //#import "PPNetworkHelper.h"
-//#import "AppManager.h"
-//#import "ShareManager.h"
-//#import "UserManager.h"
-//#import "IMManager.h"
-//#import "UIButton+XYButton.h"
+#import "AppManager.h"
+#import "LocationManager.h"
+#import "ShareManager.h"
+#import "UserManager.h"
+#import "IMManager.h"
+#import "UIButton+XYButton.h"
 
 //第三方
 #import <YYKit.h>
@@ -39,6 +41,8 @@
 #import <Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <LCProgressHUD.h>
+#import <MagicalRecord/MagicalRecord.h>
+#import <UMShare/UMShare.h>
 
 #import "KNBPrecompile.h"
 #import "UIView+Frame.h"
@@ -46,10 +50,7 @@
 //#import <ReactiveObjC.h>
 #import <IQKeyboardManager.h>
 #import "KNBUtilExtend.h"
-#import "KNBUserInfo.h"
-#import "KNGetUserLoaction.h"
 #import "KNBDataEmptySet.h"
-#import "KNUMManager.h"
 //#import <Pingpp.h>
 #import <UIImageView+WebCache.h>
 #import <UIButton+WebCache.h>

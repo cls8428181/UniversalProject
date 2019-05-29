@@ -7,7 +7,7 @@
 //
 
 #import "BRBaseView.h"
-#import "KNBCityModel.h"
+#import "CityModel.h"
 
 typedef NS_ENUM(NSInteger, KNBAddressPickerMode) {
     // 只显示省
@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, KNBAddressPickerMode) {
     KNBAddressPickerModeArea
 };
 
-typedef void(^KNBAddressResultBlock)(KNBCityModel * _Nullable province, KNBCityModel * _Nullable city, KNBCityModel * _Nullable area);
+typedef void(^KNBAddressResultBlock)(CityModel * _Nullable province, CityModel * _Nullable city, CityModel * _Nullable area);
 typedef void(^KNBAddressCancelBlock)(void);
 
 NS_ASSUME_NONNULL_BEGIN

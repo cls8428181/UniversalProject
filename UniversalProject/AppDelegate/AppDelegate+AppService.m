@@ -7,10 +7,14 @@
 //
 
 #import "AppDelegate+AppService.h"
-//#import <UMSocialCore/UMSocialCore.h>
 //#import "LoginViewController.h"
 //#import "OpenUDID.h"
 #import <YTKNetwork.h>
+#import "XHLaunchAdManager.h"
+#import <AFNetworking.h>
+#import "KNBWelcomeViewController.h"
+#import "NSString+MD5.h"
+#import "CALayer+Transition.h"
 
 @implementation AppDelegate (AppService)
 
@@ -36,7 +40,6 @@
     self.window.backgroundColor = KWhiteColor;
     [self.window makeKeyAndVisible];
     [[UIButton appearance] setExclusiveTouch:YES];
-//    [[UIButton appearance] setShowsTouchWhenHighlighted:YES];
     [UIActivityIndicatorView appearanceWhenContainedIn:[MBProgressHUD class], nil].color = KWhiteColor;
     if (@available(iOS 11.0, *)){
         [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
@@ -46,7 +49,23 @@
 #pragma mark ————— 初始化网络配置 —————
 -(void)NetWorkConfig{
     YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
-    config.baseUrl = URL_main;
+    config.baseUrl = KNB_MAINCONFIGURL;
+    //https 公匙
+    NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"https" ofType:@"cer"];
+    NSData * certData =[NSData dataWithContentsOfFile:cerPath];
+    NSSet * certSet = [[NSSet alloc] initWithObjects:certData, nil];
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
+    [securityPolicy setAllowInvalidCertificates:YES];
+    [securityPolicy setValidatesDomainName:NO];
+    [securityPolicy setPinnedCertificates:certSet];
+    config.securityPolicy = securityPolicy;
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.securityPolicy = securityPolicy;
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    //服务端返回格式问题，后端返回的结果不是"application/json"，afn 的 jsonResponseSerializer 是不认的。这里做临时处理
+    YTKNetworkAgent *agent = [YTKNetworkAgent sharedAgent];
+    [agent setValue:[NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json",@"text/html", nil]
+         forKeyPath:@"jsonResponseSerializer.acceptableContentTypes"];
 }
 
 #pragma mark ————— 初始化用户系统 —————
@@ -165,6 +184,92 @@
      * U-Share SDK为了兼容大部分平台命名，统一用appKey和appSecret进行参数设置，而QQ平台仅需将appID作为U-Share的appKey参数传进即可。
      */
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:kAppKey_Tencent/*设置QQ平台的appID*/  appSecret:nil redirectURL:nil];
+}
+
+#pragma mark - Configure CoreData
+- (void)configureCoreDataPath {
+    //3.0版本之后 本地数据库改为唯一数据库 md5 加密 作为数据库名称
+    //    NSString *dbName = [@"KNBDataBase" MD5];
+    //    [MagicalRecord cleanUp];
+    //    NSString *sqlitName = [NSString stringWithFormat:@"%@.sqlite", dbName];
+    //    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:sqlitName];
+    //    [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelOff];
+    
+    /*3.1.0版本之后，本地数据库改为多个数据库，KNBDataBase md5加密作为未登录时记录数据库
+     userId, officeId md5加密作为每个用户登录后用数据库
+     */
+    NSString *dbName;
+    NSString *userId = curUser.userId;
+    if ([userId isEqualToString:@"-1"]) {
+        dbName = [NSString stringWithFormat:@"%@.sqlite", [@"KNBDataBase" MD5]];
+    }else {
+        dbName = [NSString stringWithFormat:@"%@.sqlite", [[NSString stringWithFormat:@"%@", userId] MD5]];
+    }
+    
+    if ([KNB_APP_VERSION isEqualToString:@"3.1.0"]) {
+        NSString *path = [KNB_PATH_LIBRARY stringByAppendingPathComponent:@"Application Support/FinshFinishing"];
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSArray *contents = [fileManager contentsOfDirectoryAtPath:path error:NULL];
+        NSEnumerator *e = [contents objectEnumerator];
+        NSString *filename;
+        while ((filename = [e nextObject])) {
+            if ([filename hasPrefix:[NSString stringWithFormat:@"%@.sqlite", [@"KNBDataBase" MD5]]]) {
+                NSString *newName = [NSString stringWithFormat:@"%@.%@", [dbName stringByDeletingPathExtension], filename.pathExtension];
+                if (![newName isEqualToString:filename]) {
+                    [fileManager moveItemAtPath:[NSString stringWithFormat:@"%@/%@", path, filename] toPath:[NSString stringWithFormat:@"%@/%@", path, newName] error:nil];
+                }
+            }
+        }
+    }
+    
+    [MagicalRecord cleanUp];
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:dbName];
+    [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelOff];
+}
+
+/**
+ 数据库重命名方法
+ */
+- (void)resetCoreDataName {
+    NSString *userId = curUser.userId;
+    if (isNullStr(userId)) {
+        return;
+    }
+    NSString *path = [KNB_PATH_LIBRARY stringByAppendingPathComponent:@"Application Support/FishFinishing"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *contents = [fileManager contentsOfDirectoryAtPath:path error:NULL];
+    NSEnumerator *e = [contents objectEnumerator];
+    // md5 加密 作为数据库名
+    NSString *dbName = [[NSString stringWithFormat:@"%@", userId] MD5];
+    NSString *filename;
+    while ((filename = [e nextObject])) {
+        if ([filename hasPrefix:userId]) {
+            NSString *newName = [NSString stringWithFormat:@"%@.%@", dbName, filename.pathExtension];
+            [fileManager moveItemAtPath:[NSString stringWithFormat:@"%@/%@", path, filename] toPath:[NSString stringWithFormat:@"%@/%@", path, newName] error:nil];
+        }
+    }
+    [self configureCoreDataPath];
+}
+
+#pragma mark 引导页
+- (void)showPageGuideView {
+    if ([KNBWelcomeViewController isShowGuideView]) {
+        KNBWelcomeViewController *welcomeVC = [[KNBWelcomeViewController alloc] init];
+        welcomeVC.delegate = self;
+        self.window.rootViewController = welcomeVC;
+    } else {
+        [self isShowGuidePageViewComplete];
+        //配置广告图
+        [XHLaunchAdManager shareManager];
+    }
+}
+
+#pragma mark-- KNBWelcomeVCDelegate
+- (void)isShowGuidePageViewComplete {
+    self.tabBarController = [[MainTabBarViewController alloc] init];
+    self.navController = [[KNBNavgationController alloc] initWithRootViewController:self.tabBarController];
+    self.window.rootViewController = self.navController;
+    [self.window.layer transitionWithAnimType:TransitionAnimTypePageCurl subType:TransitionSubtypesFromRight curve:TransitionCurveEaseInEaseOut duration:0.5f];
 }
 
 #pragma mark ————— OpenURL 回调 —————

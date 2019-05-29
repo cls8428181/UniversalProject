@@ -6,7 +6,7 @@
 //  Copyright © 2019 常立山. All rights reserved.
 //
 
-#import "KNBBaseViewController.h"
+#import "BaseViewController.h"
 
 typedef NS_ENUM(NSInteger, KNBLoginVCType) {
     KNBLoginTypeLogin = 0,    //登录
@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, KNBLoginVCType) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KNBLoginViewController : KNBBaseViewController
+@interface KNBLoginViewController : BaseViewController
 /**
  视图类型
  */

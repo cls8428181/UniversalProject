@@ -9,7 +9,7 @@
 
 #import "XHLaunchAdManager.h"
 #import "XHLaunchAd.h"
-#import "KNWebViewController.h"
+#import "BaseWebViewController.h"
 #import "KNBMainConfigModel.h"
 #import "AppDelegate.h"
 
@@ -98,8 +98,8 @@
     NSString *linkUrl = [KNBMainConfigModel shareInstance].launch_adJumpUrl;
 //    NSString *title = [KNBMainConfigModel shareInstance].launch_adName;
     if (!isNullStr(linkUrl)) {
-        KNWebViewController *webVC = [[KNWebViewController alloc] init];
-        webVC.urlString = linkUrl;
+        BaseWebViewController *webVC = [[BaseWebViewController alloc] init];
+        webVC.url = linkUrl;
         [KNB_AppDelegate.navController pushViewController:webVC animated:YES];
     }
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Robert. All rights reserved.
 //
 
-#import "KNBBaseModel.h"
+#import "BaseModel.h"
 
 //主配置字典
 extern NSString *const KNB_BaseUrlKey;
