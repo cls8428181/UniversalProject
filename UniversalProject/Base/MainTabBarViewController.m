@@ -109,15 +109,15 @@ const NSInteger KNTabBarButtonTitleLabelTag = 666;
         CGFloat buttonWith = KScreenWidth / selectImgCount;
         button.adjustsImageWhenHighlighted = NO;
         CGRect titleLabelFrame = CGRectMake(0, 30, buttonWith, 20);
-        if (i == 2) {
-            CGFloat plusX = buttonWith * i;
-            CGFloat plusY = - 15;
-            button.frame = CGRectMake(plusX, plusY, buttonWith, kTabBarHeight + 15);
-            titleLabelFrame = CGRectMake(0, 45, buttonWith, 20);
-        } else {
-            button.frame = CGRectMake(buttonWith * i, 0, buttonWith, kTabBarHeight);
-        }
-        
+//        if (i == 2) {
+//            CGFloat plusX = buttonWith * i;
+//            CGFloat plusY = - 15;
+//            button.frame = CGRectMake(plusX, plusY, buttonWith, kTabBarHeight + 15);
+//            titleLabelFrame = CGRectMake(0, 45, buttonWith, 20);
+//        } else {
+//            button.frame = CGRectMake(buttonWith * i, 0, buttonWith, kTabBarHeight);
+//        }
+        button.frame = CGRectMake(buttonWith * i, 0, buttonWith, kTabBarHeight);
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:titleLabelFrame];
         titleLabel.tag = KNTabBarButtonTitleLabelTag;
         titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -191,30 +191,28 @@ const NSInteger KNTabBarButtonTitleLabelTag = 666;
 
 - (NSArray *)titlesArray {
     if (!_titlesArray) {
-        _titlesArray = @[ @"首页", @"效果图", @"预约装修", @"商家入驻", @"我的" ];
+        _titlesArray = @[ @"首页", @"我的" ];
     }
     return _titlesArray;
 }
 
 - (NSArray *)unSelectImgArray {
     if (!_unSelectImgArray) {
-        _unSelectImgArray = @[ @"knb_tabbar_home_unselect"
-                               ];
+        _unSelectImgArray = @[ @"icon_home", @"icon_my" ];
     }
     return _unSelectImgArray;
 }
 
 - (NSArray *)selectImgArray {
     if (!_selectImgArray) {
-        _selectImgArray = @[ @"knb_tabbar_home_select"
-                             ];
+        _selectImgArray = @[ @"icon_home_hover", @"icon_my_hover" ];
     }
     return _selectImgArray;
 }
 
 - (NSArray *)vcs {
     if (!_vcs) {
-        _vcs = @[ self.homeVC ];
+        _vcs = @[ self.homeVC ,self.homeVC ];
     }
     return _vcs;
 }

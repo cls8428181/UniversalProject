@@ -141,7 +141,7 @@
 //baseMuDic
 //- (NSDictionary *)appendSecretDic {
 //    NSString *jsonStr = [BaseRequest changeJsonStr:self.baseMuDic];
-////    NSString *saltKey = [[KNBMainConfigModel shareInstance] getRequestUrlWithKey:KNB_SecretSalt];
+////    NSString *saltKey = [[KNBMainConfigModel sharedKNBMainConfigModel] getRequestUrlWithKey:KNB_SecretSalt];
 ////    NSString *saltStr = [NSString stringWithFormat:@"%@%@%@", saltKey, jsonStr, saltKey];
 ////    NSString *sign = [saltStr MD5];
 ////    NSDictionary *dic = @{ @"sign" : sign,

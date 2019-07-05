@@ -118,8 +118,6 @@ CG_INLINE void removeResources(NSString *userName) {
 }
 
 CG_INLINE NSString *combineResourceUrl(NSString *url) {
-    //    NSString *complteString = [NSString stringWithFormat:@"%@%@", [[KNBMainConfigModel shareInstance] getRequestUrlWithKey:KNBResourceUrl], url];
-    //    return complteString;
     return url;
 }
 

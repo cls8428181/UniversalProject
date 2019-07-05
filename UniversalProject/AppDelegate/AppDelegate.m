@@ -41,7 +41,7 @@
     [[IMManager sharedIMManager] initIM];
     
     //配置极光推送
-    [self configureJPush:launchOptions];
+//    [self configureJPush:launchOptions];
     
     // 配置微信支付
     [KNPaypp registerWxApp:KN_WeixinAppId];

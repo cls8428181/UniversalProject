@@ -141,4 +141,15 @@ shared##className = [[self alloc] init]; \
 return shared##className; \
 }
 
+#define SINGLETON_FOR_DEFAULT(className) \
+\
++ (className *)shareInstance { \
+static className *shared##className = nil; \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+shared##className = [[self alloc] init]; \
+}); \
+return shared##className; \
+}
+
 #endif /* define_h */
