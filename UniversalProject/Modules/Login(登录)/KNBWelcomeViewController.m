@@ -24,7 +24,7 @@
     [super viewDidLoad];
     [self.view addSubview:self.scrollView];
     for (int i = 0; i < self.pageData.count; i++) {
-        KNBStartPageView *pageView = [KNBStartPageView creatStartPageView:CGRectMake(i * KNB_SCREEN_WIDTH, 0, KNB_SCREEN_WIDTH, KNB_SCREEN_HEIGHT)];
+        KNBStartPageView *pageView = [KNBStartPageView creatStartPageView:CGRectMake(i * KScreenWidth, 0, KScreenWidth, KScreenHeight)];
         pageView.pageDic = self.pageData[i];
         pageView.delegate = self;
         pageView.index = i;
@@ -44,8 +44,8 @@
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat floatX = scrollView.contentOffset.x;
-    self.scrollView.bounces = floatX > KNB_SCREEN_WIDTH;
-    if (floatX > (self.pageData.count - 1) * KNB_SCREEN_WIDTH) {
+    self.scrollView.bounces = floatX > KScreenWidth;
+    if (floatX > (self.pageData.count - 1) * KScreenWidth) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(isShowGuidePageViewComplete)]) {
             [self.delegate isShowGuidePageViewComplete];
             [self saveCurrentVersion];
@@ -76,9 +76,9 @@
 #pragma mark-- Getter
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, KNB_SCREEN_WIDTH, KNB_SCREEN_HEIGHT)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight)];
         _scrollView.delegate = self;
-        _scrollView.contentSize = CGSizeMake(KNB_SCREEN_WIDTH * self.pageData.count, KNB_SCREEN_HEIGHT);
+        _scrollView.contentSize = CGSizeMake(KScreenWidth * self.pageData.count, KScreenHeight);
         _scrollView.pagingEnabled = YES;
         _scrollView.backgroundColor = [UIColor clearColor];
         _scrollView.showsHorizontalScrollIndicator = NO;

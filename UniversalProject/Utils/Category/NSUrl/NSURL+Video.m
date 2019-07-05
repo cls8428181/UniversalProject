@@ -8,7 +8,7 @@
 
 #import "NSURL+Video.h"
 #import "NSDate+BTAddition.h"
-
+#import "SandBoxHelper.h"
 
 @implementation NSURL (Video)
 
@@ -18,7 +18,7 @@
     AVURLAsset *asset = [AVURLAsset URLAssetWithURL:inputURL options:nil];
     AVAssetExportSession *exportSession = [[AVAssetExportSession alloc] initWithAsset:asset presetName:AVAssetExportPresetMediumQuality];
 
-    NSURL *tmpDirUrl = [NSURL fileURLWithPath:KNB_PATH_TMP isDirectory:YES];
+    NSURL *tmpDirUrl = [NSURL fileURLWithPath:[SandBoxHelper tmpPath] isDirectory:YES];
 
     if (!outputURL) {
         outputURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@.mp4",

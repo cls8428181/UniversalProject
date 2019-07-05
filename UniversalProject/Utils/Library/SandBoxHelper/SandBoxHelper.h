@@ -16,6 +16,8 @@
 
 + (NSString *)docPath;              // 文档目录，需要ITUNES同步备份的数据存这里，可存放用户数据
 
++ (NSString *)libraryPath;
+
 + (NSString *)libPrefPath;          // 配置目录，配置文件存这里
 
 + (NSString *)libCachePath;         // 缓存目录，系统永远不会删除这里的文件，ITUNES会删除

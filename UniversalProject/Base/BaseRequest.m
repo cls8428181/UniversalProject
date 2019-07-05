@@ -149,6 +149,10 @@
 //    return dic;
 //}
 
+- (NSInteger)cacheTimeInSeconds {
+    return 60 * 3;
+}
+
 - (NSMutableDictionary *)baseMuDic {
     if (!_baseMuDic) {
         _baseMuDic = [NSMutableDictionary dictionary];

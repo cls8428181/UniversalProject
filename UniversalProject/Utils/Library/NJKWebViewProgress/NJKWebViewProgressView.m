@@ -50,7 +50,7 @@
 - (void)setProgress:(float)progress animated:(BOOL)animated
 {
     BOOL isGrowing = progress > 0.0;
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     [UIView animateWithDuration:(isGrowing && animated) ? _barAnimationDuration : 0.0 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         CGRect frame = weakSelf.progressBarView.frame;
         frame.size.width = progress * weakSelf.bounds.size.width;

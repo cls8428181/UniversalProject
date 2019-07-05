@@ -49,7 +49,7 @@ const NSInteger KNTabBarButtonTitleLabelTag = 666;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (KNB_SYSTEM_VERSION < 9.0 && KNB_SYSTEM_VERSION > 7.9) {
+    if (kSystemVersion < 9.0 && kSystemVersion > 7.9) {
         [[UIApplication sharedApplication] setStatusBarHidden:YES];
         [self.navigationController setNavigationBarHidden:YES animated:animated];
         [[UIApplication sharedApplication] setStatusBarHidden:NO];
@@ -61,7 +61,7 @@ const NSInteger KNTabBarButtonTitleLabelTag = 666;
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"frame"]) {
-        self.tabBarView.frame = CGRectMake(0, self.view.frame.size.height - KNB_TAB_HEIGHT, KNB_SCREEN_WIDTH, KNB_TAB_HEIGHT);
+        self.tabBarView.frame = CGRectMake(0, self.view.frame.size.height - kTabBarHeight, KScreenWidth, kTabBarHeight);
     }
 }
 
@@ -105,17 +105,17 @@ const NSInteger KNTabBarButtonTitleLabelTag = 666;
         [button addTarget:self action:@selector(tabBarPressed:) forControlEvents:UIControlEventTouchUpInside];
         [button setImage:[UIImage imageNamed:self.unSelectImgArray[i]] forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:self.selectImgArray[i]] forState:UIControlStateSelected];
-        button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, KNB_TAB_IMAGEMARGIN, 0);
-        CGFloat buttonWith = KNB_SCREEN_WIDTH / selectImgCount;
+        button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, kTabImageMargin, 0);
+        CGFloat buttonWith = KScreenWidth / selectImgCount;
         button.adjustsImageWhenHighlighted = NO;
         CGRect titleLabelFrame = CGRectMake(0, 30, buttonWith, 20);
         if (i == 2) {
             CGFloat plusX = buttonWith * i;
             CGFloat plusY = - 15;
-            button.frame = CGRectMake(plusX, plusY, buttonWith, KNB_TAB_HEIGHT + 15);
+            button.frame = CGRectMake(plusX, plusY, buttonWith, kTabBarHeight + 15);
             titleLabelFrame = CGRectMake(0, 45, buttonWith, 20);
         } else {
-            button.frame = CGRectMake(buttonWith * i, 0, buttonWith, KNB_TAB_HEIGHT);
+            button.frame = CGRectMake(buttonWith * i, 0, buttonWith, kTabBarHeight);
         }
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:titleLabelFrame];
@@ -171,10 +171,10 @@ const NSInteger KNTabBarButtonTitleLabelTag = 666;
 #pragma mark - Getter
 - (UIView *)tabBarView {
     if (!_tabBarView) {
-        CGRect tabBarFrame = CGRectMake(0, KNB_SCREEN_HEIGHT - KNB_TAB_HEIGHT, KNB_SCREEN_WIDTH, KNB_TAB_HEIGHT);
+        CGRect tabBarFrame = CGRectMake(0, KScreenHeight - kTabBarHeight, KScreenWidth, kTabBarHeight);
         _tabBarView = [[UIView alloc] initWithFrame:tabBarFrame];
         _tabBarView.backgroundColor = [UIColor whiteColor];
-        _tabBarView.layer.shadowColor = KNB_RGB(230, 230, 230).CGColor;
+        _tabBarView.layer.shadowColor = kRGB(230, 230, 230).CGColor;
         _tabBarView.layer.shadowRadius = 0.5;
         _tabBarView.layer.shadowOffset = CGSizeMake(0, -0.5); //偏移量
         _tabBarView.layer.shadowOpacity = 1;                  //阴影透明度

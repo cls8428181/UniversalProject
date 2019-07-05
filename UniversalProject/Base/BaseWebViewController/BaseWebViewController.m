@@ -51,7 +51,7 @@ NSString *const KNWebDocumentTitles = @"document.title";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.naviView addLeftBarItemImageName:@"knb_back_black" target:self sel:@selector(backAction)];
-    self.webView.frame = CGRectMake(0, KNB_NAV_HEIGHT, KNB_SCREEN_WIDTH, KNB_SCREEN_HEIGHT - KNB_NAV_HEIGHT);
+    self.webView.frame = CGRectMake(0, kNavBarHeight, KScreenWidth, KScreenHeight - kNavBarHeight);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -131,7 +131,7 @@ NSString *const KNWebDocumentTitles = @"document.title";
 
 #pragma mark - Private Method
 - (void)addMJRefreshHeadView {
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     MJRefreshNormalHeader *webViewHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         if (weakSelf.webView.canGoBack) {
             [weakSelf.webView reload];
@@ -179,7 +179,7 @@ NSString *const KNWebDocumentTitles = @"document.title";
 //    KNBShareViewController *shareViewController = [[KNBShareViewController alloc] initWithContainStatinShare:YES];
 //    shareViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
 //    self.definesPresentationContext = YES;
-//    KNB_WS(weakSelf);
+//    kWeakSelf(weakSelf);
 //    shareViewController.shareVCBtnClick = ^(UMSocialPlatformType platfromType) {
 //        if (platfromType == UMSocialPlatformType_KenuoTraining) {
 //            KNBIMGoodsMessage *goodsMessage = [[KNBIMGoodsMessage alloc] init];
@@ -257,7 +257,7 @@ NSString *const KNWebDocumentTitles = @"document.title";
 - (KNOCJSModel *)objectModel {
     if (!_objectModel) {
         _objectModel = [KNOCJSModel new];
-        KNB_WS(weakSelf);
+        kWeakSelf(weakSelf);
         _objectModel.goodsIdBlock = ^(NSString *goodsId, NSString *actionType) {
             KNB_PerformOnMainThread(^{
                 

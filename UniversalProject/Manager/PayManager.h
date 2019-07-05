@@ -23,7 +23,6 @@
 + (void)payWithOrderId:(NSString *)orderId
               payPrice:(double)payPrice
              payMethod:(NSString *)payMethod
-            chargeType:(KNBGetChargeType)type
          completeBlock:(void (^)(BOOL success, id errorMsg, NSInteger errorCode))complete;
 
 

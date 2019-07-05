@@ -26,7 +26,7 @@ int Top = 0;
         [button setTitle:title forState:UIControlStateNormal];
         button.tag = i + tag;
 
-        button.frame = CGRectMake(0, 0, KNB_SCREEN_WIDTH, ButtonHeight);
+        button.frame = CGRectMake(0, 0, KScreenWidth, ButtonHeight);
         [button sizeToFit];
 
         NSUInteger ButtonX = Left + totalX;
@@ -35,7 +35,7 @@ int Top = 0;
         NSUInteger ButtonWidth = button.bounds.size.width;
         totalX += ButtonWidth + gap;
 
-        if (totalX >= KNB_SCREEN_WIDTH) {
+        if (totalX >= KScreenWidth) {
             totalX = ButtonWidth + gap;
             ButtonX = Left;
             totalY += ButtonHeight + 5;
@@ -62,7 +62,7 @@ int Top = 0;
         UIButton *button = [[self alloc] buttonSetting];
         [button setTitle:title forState:UIControlStateNormal];
         button.tag = i + tag;
-        button.frame = CGRectMake(0, 0, KNB_SCREEN_WIDTH, ButtonHeight);
+        button.frame = CGRectMake(0, 0, KScreenWidth, ButtonHeight);
         [button sizeToFit];
         NSUInteger ButtonX = Left + totalX;
         NSUInteger ButtonY = Top + totalY;
@@ -70,7 +70,7 @@ int Top = 0;
         NSUInteger ButtonWidth = button.bounds.size.width + 30; //30是文字距两边的距离
         totalX += ButtonWidth + gap;
 
-        if (totalX >= KNB_SCREEN_WIDTH - 10) {
+        if (totalX >= KScreenWidth - 10) {
             totalX = ButtonWidth + gap;
             ButtonX = Left;
             totalY += ButtonHeight + 20;

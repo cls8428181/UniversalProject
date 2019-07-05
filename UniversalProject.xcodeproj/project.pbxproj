@@ -316,8 +316,7 @@
 		185FBD36229D54AA00C351A6 /* AppDelegate+PushService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+PushService.m"; sourceTree = "<group>"; };
 		185FBD37229D54AA00C351A6 /* AppDelegate+AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppService.h"; sourceTree = "<group>"; };
 		185FBD3B229D55D100C351A6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		185FBD3C229D560D00C351A6 /* KNBUtilExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KNBUtilExtend.h; path = "UniversalProject/Supporting Flies/KNBUtilExtend.h"; sourceTree = SOURCE_ROOT; };
-		185FBD3D229D560D00C351A6 /* KNBPrecompile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KNBPrecompile.h; path = "UniversalProject/Supporting Flies/KNBPrecompile.h"; sourceTree = SOURCE_ROOT; };
+		185FBD3C229D560D00C351A6 /* UtilsExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UtilsExtend.h; path = "UniversalProject/Supporting Flies/UtilsExtend.h"; sourceTree = SOURCE_ROOT; };
 		185FBD3E229D570500C351A6 /* KNBMainConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBMainConfigModel.h; sourceTree = "<group>"; };
 		185FBD3F229D570500C351A6 /* KNBMainConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBMainConfigModel.m; sourceTree = "<group>"; };
 		185FBD41229D585800C351A6 /* KNOCJSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNOCJSModel.h; sourceTree = "<group>"; };
@@ -1001,8 +1000,7 @@
 			children = (
 				961C0540229D81BF009C14C6 /* CommonMacros.h */,
 				961C0541229D81BF009C14C6 /* FontAndColorMacros.h */,
-				185FBD3D229D560D00C351A6 /* KNBPrecompile.h */,
-				185FBD3C229D560D00C351A6 /* KNBUtilExtend.h */,
+				185FBD3C229D560D00C351A6 /* UtilsExtend.h */,
 				961C0542229D81BF009C14C6 /* ThirdMacros.h */,
 				961C0543229D81BF009C14C6 /* URLMacros.h */,
 				961C0544229D81BF009C14C6 /* UtilsMacros.h */,

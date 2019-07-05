@@ -39,7 +39,7 @@
     [self addSubview:self.noticeLabel];
     [self addSubview:self.noticeImageView];
     [self addSubview:self.subNoticeLabel];
-    self.center = CGPointMake(KNB_SCREEN_WIDTH / 2, KNB_SCREEN_HEIGHT / 2);
+    self.center = CGPointMake(KScreenWidth / 2, KScreenHeight / 2);
 }
 
 
@@ -49,7 +49,7 @@
 }
 
 - (void)updateConstraints {
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
 
     [_noticeImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(weakSelf.mas_centerX);
@@ -65,7 +65,7 @@
     [_subNoticeLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(weakSelf.noticeLabel.mas_bottom).offset(10);
         make.centerX.mas_equalTo(weakSelf.noticeImageView.mas_centerX);
-        make.width.mas_equalTo(KNB_SCREEN_WIDTH - 48);
+        make.width.mas_equalTo(KScreenWidth - 48);
     }];
 
     [super updateConstraints];
@@ -76,7 +76,7 @@
 - (UILabel *)noticeLabel {
     if (!_noticeLabel) {
         _noticeLabel = [[UILabel alloc] init];
-        _noticeLabel.font = KNB_FONT_SIZE_DEFAULT(15);
+        _noticeLabel.font = SYSTEMFONT(15);
         _noticeLabel.textColor = [UIColor knBlackColor];
         _noticeLabel.textAlignment = NSTextAlignmentCenter;
     }
@@ -86,9 +86,9 @@
 - (UILabel *)subNoticeLabel {
     if (!_subNoticeLabel) {
         _subNoticeLabel = [[UILabel alloc] init];
-        _subNoticeLabel.font = KNB_FONT_SIZE_DEFAULT(12);
+        _subNoticeLabel.font = SYSTEMFONT(12);
         _subNoticeLabel.textAlignment = NSTextAlignmentCenter;
-        _subNoticeLabel.textColor = KNB_RGBA(0, 0, 0, 0.8);
+        _subNoticeLabel.textColor = kRGBA(0, 0, 0, 0.8);
         _subNoticeLabel.numberOfLines = 3;
     }
     return _subNoticeLabel;

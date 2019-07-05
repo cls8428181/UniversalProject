@@ -71,7 +71,7 @@ static CGFloat const kAnimateDuration = 1;
 
 - (void)animateToActiveState
 {
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     [UIView animateWithDuration:kAnimateDuration delay:0 usingSpringWithDamping:.5 initialSpringVelocity:-20 options:UIViewAnimationOptionCurveLinear animations:^{
         weakSelf.backgroundColor = weakSelf.dotColor;
         weakSelf.transform = CGAffineTransformMakeScale(1.4, 1.4);
@@ -80,7 +80,7 @@ static CGFloat const kAnimateDuration = 1;
 
 - (void)animateToDeactiveState
 {
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     [UIView animateWithDuration:kAnimateDuration delay:0 usingSpringWithDamping:.5 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
         weakSelf.backgroundColor = [UIColor clearColor];
         weakSelf.transform = CGAffineTransformIdentity;

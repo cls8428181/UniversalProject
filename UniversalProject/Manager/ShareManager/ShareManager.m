@@ -143,7 +143,7 @@ SINGLETON_FOR_CLASS(ShareManager);
                                    desc:(NSString *)desc
                                shareUrl:(NSString *)shareUrl
                   currentViewController:(UIViewController *)currentViewController {
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     //更改成对应的跳转方式
     BOOL hadInstalledWeixin = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"weixin://"]];
     BOOL hadInstalledQQ = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"mqq://"]];
@@ -223,7 +223,7 @@ SINGLETON_FOR_CLASS(ShareManager);
     messageObject.shareObject = shareObject;
     
     //调用分享接口
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     [[UMSocialManager defaultManager] shareToPlatform:platformType
                                         messageObject:messageObject
                                 currentViewController:controller
@@ -265,7 +265,7 @@ SINGLETON_FOR_CLASS(ShareManager);
                                    desc:(NSString *)desc
                                shareUrl:(NSString *)shareUrl
                   currentViewController:(UIViewController *)currentViewController {
-    KNB_WS(weakSelf)
+    kWeakSelf(weakSelf)
     [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
         [weakSelf shareWebPage:currentViewController toPlatformType:platformType withTitle:title url:shareUrl descr:desc shareImage:shareImage];
     }];
@@ -288,7 +288,7 @@ SINGLETON_FOR_CLASS(ShareManager);
     messageObject.shareObject = shareObject;
     
     //调用分享接口
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     [[UMSocialManager defaultManager] shareToPlatform:platformType
                                         messageObject:messageObject
                                 currentViewController:controller
@@ -320,7 +320,7 @@ SINGLETON_FOR_CLASS(ShareManager);
                              shareImage:(UIImage *)shareImage
                                    desc:(NSString *)desc
                   currentViewController:(UIViewController *)currentViewController {
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     //更改成对应的跳转方式
     BOOL hadInstalledWeixin = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"weixin://"]];
     BOOL hadInstalledQQ = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"mqq://"]];
@@ -396,7 +396,7 @@ SINGLETON_FOR_CLASS(ShareManager);
     messageObject.shareObject = shareObject;
     
     //调用分享接口
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:controller completion:^(id data, NSError *error) {
         
         if (error) {

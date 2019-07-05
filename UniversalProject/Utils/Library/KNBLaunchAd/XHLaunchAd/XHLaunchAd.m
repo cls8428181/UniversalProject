@@ -163,7 +163,7 @@ static  SourceType _sourceType = SourceTypeLaunchImage;
     self = [super init];
     if (self) {
         [self setupLaunchAd];
-        KNB_WS(weakSelf);
+        kWeakSelf(weakSelf);
         [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
             [weakSelf setupLaunchAdEnterForeground];
         }];
@@ -403,7 +403,7 @@ static  SourceType _sourceType = SourceTypeLaunchImage;
 
 #pragma mark - add subViews
 -(void)addSubViews:(NSArray *)subViews{
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     [subViews enumerateObjectsUsingBlock:^(UIView *view, NSUInteger idx, BOOL *stop) {
         [weakSelf.window addSubview:view];
     }];
@@ -479,7 +479,7 @@ static  SourceType _sourceType = SourceTypeLaunchImage;
 }
 
 -(void)startWaitDataDispathTiemr{
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     __block NSInteger duration = defaultWaitDataDuration;
     if(_waitDataDuration) duration = _waitDataDuration;
     _waitDataTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
@@ -500,7 +500,7 @@ static  SourceType _sourceType = SourceTypeLaunchImage;
 }
 
 -(void)startSkipDispathTimer{
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     XHLaunchAdConfiguration * configuration = [self commonConfiguration];
     DISPATCH_SOURCE_CANCEL_SAFE(_waitDataTimer);
     if(!configuration.skipButtonType) configuration.skipButtonType = SkipTypeTimeText;//默认
@@ -531,7 +531,7 @@ static  SourceType _sourceType = SourceTypeLaunchImage;
 }
 
 -(void)removeAndAnimate{
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     XHLaunchAdConfiguration * configuration = [self commonConfiguration];
     CGFloat duration = showFinishAnimateTimeDefault;
     if(configuration.showFinishAnimateTime>0) duration = configuration.showFinishAnimateTime;
@@ -585,7 +585,7 @@ static  SourceType _sourceType = SourceTypeLaunchImage;
 }
 
 -(void)removeAndAnimateDefault{
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     XHLaunchAdConfiguration * configuration = [self commonConfiguration];
     CGFloat duration = showFinishAnimateTimeDefault;
     if(configuration.showFinishAnimateTime>0) duration = configuration.showFinishAnimateTime;

@@ -79,7 +79,7 @@
  *  在这里添加UIView的约束布局相关代码
  */
 - (void)settingConstraints {
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(weakSelf.view);
     }];
@@ -117,7 +117,7 @@
         }];
         
         [self.wechatButton mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.mas_equalTo(- KNB_TAB_HEIGHT - 50);
+            make.bottom.mas_equalTo(- kTabBarHeight - 50);
             make.centerX.equalTo(weakSelf.view);
         }];
         
@@ -318,7 +318,7 @@
 - (void)loginRequest {
 //    KNBLoginLoginApi *api = [[KNBLoginLoginApi alloc] initWithMobile:self.mobileView.textField.text password:self.passwordView.textField.text];
 //    api.hudString = @"";
-//    KNB_WS(weakSelf);
+//    kWeakSelf(weakSelf);
 //    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *_Nonnull request) {
 //        if (api.requestSuccess) {
 //            NSDictionary *dic = request.responseObject[@"list"];
@@ -358,7 +358,7 @@
 //
 //    KNBLoginRegisterApi *api = [[KNBLoginRegisterApi alloc] initWithMobile:self.mobileTextView.textField.text code:self.verinumView.textField.text password:self.passwordSetView.textField.text repassword:self.passwordEnterView.textField.text];
 //    api.hudString = @"";
-//    KNB_WS(weakSelf);
+//    kWeakSelf(weakSelf);
 //    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *_Nonnull request) {
 //        if (api.requestSuccess) {
 //            NSDictionary *dic = request.responseObject[@"list"];
@@ -378,7 +378,7 @@
 - (void)findPassswordRequest {
 //    KNBLoginModifyApi *api = [[KNBLoginModifyApi alloc] initWithMobile:self.mobileTextView.textField.text code:self.verinumView.textField.text password:self.passwordNewView.textField.text repassword:self.passwordEnterView.textField.text];
 //    api.hudString = @"";
-//    KNB_WS(weakSelf);
+//    kWeakSelf(weakSelf);
 //    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *_Nonnull request) {
 //        if (api.requestSuccess) {
 //            [LCProgressHUD showSuccess:@"修改成功"];
@@ -419,7 +419,7 @@
 //    }
 //    KNBLoginSendCodeApi *codeApi = [[KNBLoginSendCodeApi alloc] initWithMobile:self.mobileTextView.textField.text type:self.vcType == KNBLoginTypeRegister ? KNBLoginSendCodeTypeRegister : KNBLoginSendCodeTypeForgot];
 //
-//    KNB_WS(weakSelf);
+//    kWeakSelf(weakSelf);
 //    [codeApi startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
 //        if (codeApi.requestSuccess) {
 //            [LCProgressHUD showSuccess:@"发送成功"];
@@ -473,7 +473,7 @@
 - (void)thirdPartyRequest:(UMSocialUserInfoResponse *)resp {
 //    KNBLoginThirdPartyApi *api = [[KNBLoginThirdPartyApi alloc] initWithOpenid:resp.openid loginType:KNBLoginThirdPartyTypeWechat portrait:resp.iconurl nickName:resp.name sex:resp.unionGender];
 //    api.hudString = @"";
-//    KNB_WS(weakSelf);
+//    kWeakSelf(weakSelf);
 //    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *_Nonnull request) {
 //        if (api.requestSuccess) {
 //            NSDictionary *dic = request.responseObject[@"list"];
@@ -508,7 +508,7 @@
 - (UIImageView *)bgView {
     if (!_bgView) {
         _bgView = [[UIImageView alloc] init];
-        _bgView.image = KNBImages(@"knb_login_registerbg");
+        _bgView.image = IMAGE_NAMED(@"knb_login_registerbg");
     }
     return _bgView;
 }
@@ -516,7 +516,7 @@
 - (KNBButton *)logoButton {
     if (!_logoButton) {
         _logoButton = [KNBButton buttonWithType:UIButtonTypeCustom];
-        [_logoButton setImage:KNBImages(@"knb_login_logo") forState:UIControlStateNormal];
+        [_logoButton setImage:IMAGE_NAMED(@"knb_login_logo") forState:UIControlStateNormal];
         [_logoButton sizeToFit];
         [_logoButton setTitle:@"大鱼装修" forState:UIControlStateNormal];
         _logoButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
@@ -543,7 +543,7 @@
 - (KNBLoginInputView *)verinumView {
     if (!_verinumView) {
         _verinumView = [[KNBLoginInputView alloc] initWithFrame:CGRectZero viewType:KNBLoginInputViewTypeVerify];
-        KNB_WS(weakSelf);
+        kWeakSelf(weakSelf);
         _verinumView.getVerifyCodeBlock = ^{
             [weakSelf getVerifyCodeRequest];
         };
@@ -582,7 +582,7 @@
 - (KNBButton *)sureButton {
     if (!_sureButton) {
         _sureButton = [KNBButton buttonWithType:UIButtonTypeCustom];
-        _sureButton.titleLabel.font = KNBFont(16);
+        _sureButton.titleLabel.font = kFont(16);
         [_sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_sureButton setBackgroundColor:[UIColor colorWithHex:0x009fe8]];
         _sureButton.layer.masksToBounds = YES;
@@ -603,7 +603,7 @@
     if (!_newRegisterButton) {
         _newRegisterButton = [KNBButton buttonWithType:UIButtonTypeCustom];
         [_newRegisterButton setTitle:@"没有账号?" forState:UIControlStateNormal];
-        _newRegisterButton.titleLabel.font = KNBFont(11);
+        _newRegisterButton.titleLabel.font = kFont(11);
         [_newRegisterButton setTitleColor:[UIColor colorWithHex:0x009fe8] forState:UIControlStateNormal];
         [_newRegisterButton addTarget:self action:@selector(userRegisterClick:) forControlEvents:UIControlEventTouchUpInside];
         _newRegisterButton.titleLabel.textAlignment = NSTextAlignmentRight;
@@ -615,7 +615,7 @@
     if (!_findButton) {
         _findButton = [KNBButton buttonWithType:UIButtonTypeCustom];
         [_findButton setTitle:@"忘记密码" forState:UIControlStateNormal];
-        _findButton.titleLabel.font = KNBFont(11);
+        _findButton.titleLabel.font = kFont(11);
         [_findButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_findButton addTarget:self action:@selector(findClick:) forControlEvents:UIControlEventTouchUpInside];
         _findButton.titleLabel.textAlignment = NSTextAlignmentRight;
@@ -652,7 +652,7 @@
 - (UIButton *)qqButton {
     if (!_qqButton) {
         _qqButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_qqButton setImage:KNBImages(@"knb_login_qq") forState:UIControlStateNormal];
+        [_qqButton setImage:IMAGE_NAMED(@"knb_login_qq") forState:UIControlStateNormal];
         [_qqButton addTarget:self action:@selector(qqThirdPartyLogin) forControlEvents:UIControlEventTouchUpInside];
     }
     return _qqButton;
@@ -661,7 +661,7 @@
 - (UIButton *)wechatButton {
     if (!_wechatButton) {
         _wechatButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_wechatButton setImage:KNBImages(@"knb_login_wechat") forState:UIControlStateNormal];
+        [_wechatButton setImage:IMAGE_NAMED(@"knb_login_wechat") forState:UIControlStateNormal];
         [_wechatButton addTarget:self action:@selector(wechatThirdPartyLogin) forControlEvents:UIControlEventTouchUpInside];
 
     }
@@ -671,7 +671,7 @@
 - (UIButton *)sinaButton {
     if (!_sinaButton) {
         _sinaButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_sinaButton setImage:KNBImages(@"knb_login_blog") forState:UIControlStateNormal];
+        [_sinaButton setImage:IMAGE_NAMED(@"knb_login_blog") forState:UIControlStateNormal];
         [_sinaButton addTarget:self action:@selector(sinaThirdPartyLogin) forControlEvents:UIControlEventTouchUpInside];
     }
     return _sinaButton;
@@ -681,7 +681,7 @@
     if (!_loginButton) {
         _loginButton = [KNBButton buttonWithType:UIButtonTypeCustom];
         [_loginButton setTitle:@"已有账号" forState:UIControlStateNormal];
-        _loginButton.titleLabel.font = KNBFont(11);
+        _loginButton.titleLabel.font = kFont(11);
         [_loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_loginButton addTarget:self action:@selector(loginClick:) forControlEvents:UIControlEventTouchUpInside];
         _loginButton.titleLabel.textAlignment = NSTextAlignmentRight;

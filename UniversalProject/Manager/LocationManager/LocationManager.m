@@ -64,7 +64,7 @@ SINGLETON_FOR_CLASS(LocationManager)
     }
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
-    if (KNB_SYSTEM_VERSION > 8.0) {
+    if (kSystemVersion > 8.0) {
         [_locationManager requestWhenInUseAuthorization];
         [_locationManager requestAlwaysAuthorization];
     }
@@ -166,7 +166,7 @@ SINGLETON_FOR_CLASS(LocationManager)
         }
         !saveCompleteBlock ?: saveCompleteBlock();
     } else {
-        KNB_WS(weakSelf);
+        kWeakSelf(weakSelf);
         CLGeocoder *myGeocoder = [[CLGeocoder alloc] init];
         [myGeocoder geocodeAddressString:address completionHandler:^(NSArray *placemarks, NSError *error) {
             if ([placemarks count] > 0 && error == nil) {

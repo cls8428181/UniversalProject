@@ -167,7 +167,7 @@
 }
 
 -(void)startRoundDispathTimerWithDuration:(CGFloat )duration{
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     NSTimeInterval period = 0.05;
     __block CGFloat roundDuration = duration;
     _roundTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));

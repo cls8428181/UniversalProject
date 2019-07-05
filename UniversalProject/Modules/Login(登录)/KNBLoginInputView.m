@@ -211,11 +211,11 @@
     if (!_textField) {
         _textField = [[UITextField alloc] init];
         _textField.textColor = [UIColor whiteColor];
-        _textField.font = KNBFont(16);
+        _textField.font = kFont(16);
         _textField.secureTextEntry = NO;
         _textField.delegate = self;
         _textField.returnKeyType = UIReturnKeyDone;
-        [_textField setValue:KNBFont(14) forKeyPath:@"_placeholderLabel.font"];
+        [_textField setValue:kFont(14) forKeyPath:@"_placeholderLabel.font"];
     }
     return _textField;
 }
@@ -238,7 +238,7 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
-        _titleLabel.font = KNBFont(16);
+        _titleLabel.font = kFont(16);
         _titleLabel.textColor = [UIColor whiteColor];
     }
     return _titleLabel;
@@ -248,7 +248,7 @@
     if (!_timeButton) {
         _timeButton = [KNBButton buttonWithType:UIButtonTypeCustom];
         [_timeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
-        _timeButton.titleLabel.font = KNBFont(11);
+        _timeButton.titleLabel.font = kFont(11);
         [_timeButton setTitleColor:[UIColor colorWithHex:0x009fe8] forState:UIControlStateNormal];
         [_timeButton addTarget:self action:@selector(selectVeriNumClick:) forControlEvents:UIControlEventTouchUpInside];
         _timeButton.titleLabel.textAlignment = NSTextAlignmentRight;
@@ -258,8 +258,8 @@
 - (KNBButton *)showOrHidenButton {
     if (!_showOrHidenButton) {
         _showOrHidenButton = [KNBButton buttonWithType:UIButtonTypeCustom];
-        [_showOrHidenButton setImage:KNBImages(@"knb_login_invisible") forState:UIControlStateNormal];
-        [_showOrHidenButton setImage:KNBImages(@"knb_login_eye") forState:UIControlStateSelected];
+        [_showOrHidenButton setImage:IMAGE_NAMED(@"knb_login_invisible") forState:UIControlStateNormal];
+        [_showOrHidenButton setImage:IMAGE_NAMED(@"knb_login_eye") forState:UIControlStateSelected];
         [_showOrHidenButton addTarget:self action:@selector(showOrHidenButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _showOrHidenButton;

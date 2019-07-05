@@ -7,7 +7,6 @@
 //
 
 #import "CCTextField.h"
-#define Default_FontColor KNBColor(0x333333)
 
 @implementation CCTextField
 
@@ -33,11 +32,11 @@
     //字体大小
     self.font = [UIFont systemFontOfSize:15];
     //字体颜色
-    self.textColor = Default_FontColor;
+    self.textColor = CDefaultFontColor;
     //光标颜色
     self.tintColor= self.textColor;
     //占位符的颜色和大小
-    [self setValue:KNBColor(0x7e7e7e) forKeyPath:@"_placeholderLabel.textColor"];
+    [self setValue:kColor(0x7e7e7e) forKeyPath:@"_placeholderLabel.textColor"];
     [self setValue:[UIFont boldSystemFontOfSize:14] forKeyPath:@"_placeholderLabel.font"];
     // 不成为第一响应者
     [self resignFirstResponder];

@@ -15,6 +15,7 @@
 #import "KNBWelcomeViewController.h"
 #import "NSString+MD5.h"
 #import "CALayer+Transition.h"
+#import "SandBoxHelper.h"
 
 @implementation AppDelegate (AppService)
 
@@ -206,8 +207,8 @@
         dbName = [NSString stringWithFormat:@"%@.sqlite", [[NSString stringWithFormat:@"%@", userId] MD5]];
     }
     
-    if ([KNB_APP_VERSION isEqualToString:@"3.1.0"]) {
-        NSString *path = [KNB_PATH_LIBRARY stringByAppendingPathComponent:@"Application Support/FinshFinishing"];
+    if ([kAPP_VERSION isEqualToString:@"3.1.0"]) {
+        NSString *path = [[SandBoxHelper libraryPath] stringByAppendingPathComponent:@"Application Support/FinshFinishing"];
         NSFileManager *fileManager = [NSFileManager defaultManager];
         NSArray *contents = [fileManager contentsOfDirectoryAtPath:path error:NULL];
         NSEnumerator *e = [contents objectEnumerator];
@@ -235,7 +236,7 @@
     if (isNullStr(userId)) {
         return;
     }
-    NSString *path = [KNB_PATH_LIBRARY stringByAppendingPathComponent:@"Application Support/FishFinishing"];
+    NSString *path = [[SandBoxHelper libraryPath] stringByAppendingPathComponent:@"Application Support/FishFinishing"];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSArray *contents = [fileManager contentsOfDirectoryAtPath:path error:NULL];
     NSEnumerator *e = [contents objectEnumerator];

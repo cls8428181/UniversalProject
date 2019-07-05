@@ -79,13 +79,13 @@
 
 -(void)showNoDataImage
 {
-    kWeakSelf(self);
+    kWeakSelf(weakSelf);
     _noDataView=[[UIImageView alloc] init];
     [_noDataView setImage:[UIImage imageNamed:@"generl_nodata"]];
     [self.view.subviews enumerateObjectsUsingBlock:^(UITableView* obj, NSUInteger idx, BOOL *stop) {
         if ([obj isKindOfClass:[UITableView class]]) {
-            [weakself.noDataView setFrame:CGRectMake(0, 0,obj.frame.size.width, obj.frame.size.height)];
-            [obj addSubview:weakself.noDataView];
+            [weakSelf.noDataView setFrame:CGRectMake(0, 0,obj.frame.size.width, obj.frame.size.height)];
+            [obj addSubview:weakSelf.noDataView];
         }
     }];
 }
@@ -149,7 +149,7 @@
 #pragma mark - Getting
 - (UITableView *)tableView {
     if (!_tableView) {
-        CGRect frame = CGRectMake(0, KNB_NAV_HEIGHT, KNB_SCREEN_WIDTH, KNB_SCREEN_HEIGHT - KNB_NAV_HEIGHT);
+        CGRect frame = CGRectMake(0, kNavBarHeight, KScreenWidth, KScreenHeight - kNavBarHeight);
         _tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.backgroundColor = [UIColor knBgColor];
@@ -169,7 +169,7 @@
 
 - (UITableView *)groupTableView { // group
     if (!_groupTableView) {
-        CGRect frame = CGRectMake(0, KNB_NAV_HEIGHT, KNB_SCREEN_WIDTH, KNB_SCREEN_HEIGHT - KNB_NAV_HEIGHT);
+        CGRect frame = CGRectMake(0, kNavBarHeight, KScreenWidth, KScreenHeight - kNavBarHeight);
         _groupTableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
         _groupTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _groupTableView.backgroundColor = [UIColor knBgColor];
@@ -274,7 +274,7 @@
 }
 
 - (void)addMJRefreshHeadView:(KNMJHeaderLoadCompleteBlock)completeBlock {
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     MJRefreshNormalHeader *tableViewHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf.tableView.mj_footer resetNoMoreData];
         weakSelf.requestPage = 1;

@@ -34,7 +34,7 @@ static NSString *locationKey = @"placeHolderLocation"; //name的key
     if (self.zw_placeHolder) {
         if (self.zw_placeHolderLabel.superview) {
             if (self.placeHolderLocation == ZWPlaceHolderLocationCenter) {
-                KNB_WS(weakSelf);
+                kWeakSelf(weakSelf);
                 [self.zw_placeHolderLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
                     make.centerX.equalTo(weakSelf);
                     make.centerY.equalTo(weakSelf.mas_centerY).mas_offset(5);

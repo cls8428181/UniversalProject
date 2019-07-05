@@ -1,13 +1,13 @@
 //
-//  KNBUtilExtend.h
+//  UtilsExtend.h
 //  KenuoTraining
 //
 //  Created by Robert on 16/2/22.
 //  Copyright © 2016年 Robert. All rights reserved.
 //
 
-#ifndef KNBUtilExtend_h
-#define KNBUtilExtend_h
+#ifndef UtilsExtend_h
+#define UtilsExtend_h
 
 //通知相关
 CG_INLINE void KNB_ADD_NOTIFICATION(NSString *name, id target, SEL action, id object) {
@@ -50,14 +50,6 @@ CG_INLINE void KNB_PerformOnMainThread(void (^block)(void)) {
 typedef NS_ENUM(NSUInteger, KNBRecorderType) {
     KNBRecorderPhoto = 2, //照片
     KNBRecorderVideo      //视频
-};
-
-/*
- * 支付相关
- */
-typedef NS_ENUM(NSUInteger, KNBGetChargeType) {
-    KNBGetChargeTypeRecruitment,       //商家入驻
-    KNBGetChargeTypeBuyService         //购买服务
 };
 
 typedef NS_ENUM(NSInteger, KNBOrderPayType) {
@@ -347,4 +339,4 @@ CG_INLINE NSString *WebURLDecodedString(NSString * str)
     return [str stringByRemovingPercentEncoding];
 }
 
-#endif /* KNBUtilExtend_h */
+#endif /* UtilsExtend_h */

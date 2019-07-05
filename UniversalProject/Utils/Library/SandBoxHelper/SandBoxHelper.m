@@ -24,6 +24,11 @@
     return [paths objectAtIndex:0];
 }
 
++ (NSString *)libraryPath {
+    NSArray * paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    return [paths objectAtIndex:0];
+}
+
 + (NSString *)libPrefPath {
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     return [[paths objectAtIndex:0] stringByAppendingFormat:@"/Preferences"];

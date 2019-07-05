@@ -45,18 +45,15 @@
 #import <LCProgressHUD.h>
 #import <MagicalRecord/MagicalRecord.h>
 #import <UMShare/UMShare.h>
-
-#import "KNBPrecompile.h"
 #import "UIView+Frame.h"
 #import "UIColor+Hex.h"
 //#import <ReactiveObjC.h>
 #import <IQKeyboardManager.h>
-#import "KNBUtilExtend.h"
+#import "UtilsExtend.h"
 #import "KNBDataEmptySet.h"
 //#import <Pingpp.h>
 #import <UIImageView+WebCache.h>
 #import <UIButton+WebCache.h>
-//#import "KNBAlertRemind.h"
 
 #ifdef DEBUG
 #define NSLog(...) NSLog(__VA_ARGS__);
@@ -79,8 +76,8 @@
 #define KN_FileServerUrl  @"https://import.idengyun.com:8086"
 
 // 根据6/6s设计图等比例适配
-#define KNB_SCREEN_ASPECT_RATIO_H(height) (KNB_SCREEN_WIDTH / 375.0) * height
-#define KNB_SCREEN_ASPECT_RATIO_W(width) (KNB_SCREEN_HEIGHT / 667.0) * width
+#define KNB_SCREEN_ASPECT_RATIO_H(height) (KScreenWidth / 375.0) * height
+#define KNB_SCREEN_ASPECT_RATIO_W(width) (KScreenHeight / 667.0) * width
 
 typedef NS_ENUM(NSInteger, KNTraingErrorCode) {
     KNTraingError_token = -1, // token过期

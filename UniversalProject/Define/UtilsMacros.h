@@ -20,14 +20,17 @@
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
 #define kMainTabBarVC (MainTabBarViewController *)kAppDelegate.tabBarController
 
-#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
-#define kNavBarHeight 44.0
-#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+//不包括状态栏的导航高度
+#define kUnStatusNavH 44
+#define kStatusBarHeight (kISIPHONEX ? 44 : 20)
+#define kNavBarHeight (kStatusBarHeight + kUnStatusNavH)
+#define kTabBarHeight (kISIPHONEX ? 83 : 49)
 #define kTopHeight (kStatusBarHeight + kNavBarHeight)
+#define kTabImageMargin (kISIPHONEX ? 40 : 10)
 
 //获取屏幕宽高
 #define KScreenWidth ([[UIScreen mainScreen] bounds].size.width)
-#define KScreenHeight [[UIScreen mainScreen] bounds].size.height
+#define KScreenHeight ([[UIScreen mainScreen] bounds].size.height)
 #define kScreen_Bounds [UIScreen mainScreen].bounds
 
 #define Iphone6ScaleWidth KScreenWidth/375.0
@@ -36,7 +39,7 @@
 #define kRealValue(with) ((with)*(KScreenWidth/375.0f))
 
 //强弱引用
-#define kWeakSelf(type)  __weak typeof(type) weak##type = type;
+#define kWeakSelf(weakSelf) __weak __typeof(self) weakSelf = self;
 #define kStrongSelf(type) __strong typeof(type) type = weak##type;
 
 //View 圆角和加边框
@@ -57,8 +60,18 @@
 
 // 当前系统版本
 #define CurrentSystemVersion [[UIDevice currentDevice].systemVersion doubleValue]
+//App版本
+#define kAPP_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 //当前语言
-#define CurrentLanguage (［NSLocale preferredLanguages] objectAtIndex:0])
+#define CurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
+//判断是否是iphoneX XS
+#define IS_IPHONE_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size)) : NO)
+// 判断iPHoneXR
+#define IS_IPHONE_XR ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+// 判断iPhoneXs_Max
+#define IS_IPHONE_Xs_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
+// X、XR、XS、XS_MAX系列
+#define kISIPHONEX ((IS_IPHONE_X == YES || IS_IPHONE_XR == YES || IS_IPHONE_Xs_Max == YES) ? YES : NO)
 
 //-------------------打印日志-------------------------
 //DEBUG  模式下打印日志,当前行
@@ -70,6 +83,8 @@
 
 //拼接字符串
 #define NSStringFormat(format,...) [NSString stringWithFormat:format,##__VA_ARGS__]
+//过滤字符串
+#define KNBLimitString(string, index) (!isNullStr(string) && string.length > index) ? [string substringWithRange:NSMakeRange(0, index)] : string;
 
 //颜色
 #define KClearColor [UIColor clearColor]
@@ -80,16 +95,13 @@
 #define KBlueColor [UIColor blueColor]
 #define KRedColor [UIColor redColor]
 #define kRandomColor    KRGBColor(arc4random_uniform(256)/255.0,arc4random_uniform(256)/255.0,arc4random_uniform(256)/255.0)        //随机色生成
+#define kRGBA(r, g, b, a) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a]
+#define kRGB(r, g, b) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1.0]
 
 //字体
 #define BOLDSYSTEMFONT(FONTSIZE)[UIFont boldSystemFontOfSize:FONTSIZE]
 #define SYSTEMFONT(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
 #define FONT(NAME, FONTSIZE)    [UIFont fontWithName:(NAME) size:(FONTSIZE)]
-
-
-//定义UIImage对象
-#define ImageWithFile(_pointer) [UIImage imageWithContentsOfFile:([[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@@%dx", _pointer, (int)[UIScreen mainScreen].nativeScale] ofType:@"png"])]
-#define IMAGE_NAMED(name) [UIImage imageNamed:name]
 
 //数据验证
 #define StrValid(f) (f!=nil && [f isKindOfClass:[NSString class]] && ![f isEqualToString:@""])

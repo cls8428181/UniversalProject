@@ -93,7 +93,7 @@ NSString *const KNBOrder_AlipayPay = @"/Api/Payment/createOrderByAlipay";       
 
 @implementation KNBMainConfigModel
 
-KNB_DEFINE_SINGLETON_FOR_CLASS(KNBMainConfigModel);
+SINGLETON_FOR_CLASS(KNBMainConfigModel);
 
 - (NSString *)getRequestUrlWithKey:(NSString *)key {
     NSString *url = [NSString stringWithFormat:@"%@%@",URL_main,key];;
@@ -143,7 +143,7 @@ KNB_DEFINE_SINGLETON_FOR_CLASS(KNBMainConfigModel);
 - (NSString *)newVersion {
     NSString *envelope = [self getRequestUrlWithKey:KN_Version];
     if (isNullStr(envelope)) {
-        return KNB_APP_VERSION;
+        return kAPP_VERSION;
     }
     return envelope;
 }

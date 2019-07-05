@@ -56,7 +56,7 @@
 - (void)URLSession:(NSURLSession *)session
       downloadTask:(NSURLSessionDownloadTask *)downloadTask
 didFinishDownloadingToURL:(NSURL *)location {
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     NSData *data = [NSData dataWithContentsOfURL:location];
     UIImage *image = [UIImage imageWithData:data];
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -86,7 +86,7 @@ didFinishDownloadingToURL:(NSURL *)location {
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
     if (error){
         XHLaunchAdLog(@"error = %@",error);
-        KNB_WS(weakSelf);
+        kWeakSelf(weakSelf);
         dispatch_async(dispatch_get_main_queue(), ^{
             if (weakSelf.completedBlock) {
                 weakSelf.completedBlock(nil,nil, error);
@@ -137,7 +137,7 @@ didFinishDownloadingToURL:(NSURL *)location {
 - (void)URLSession:(NSURLSession *)session
       downloadTask:(NSURLSessionDownloadTask *)downloadTask
 didFinishDownloadingToURL:(NSURL *)location {
-    KNB_WS(weakSelf);
+    kWeakSelf(weakSelf);
     NSError *error=nil;
     NSURL *toURL = [NSURL fileURLWithPath:[XHLaunchAdCache videoPathWithURL:self.url]];
     [[NSFileManager defaultManager] copyItemAtURL:location toURL:toURL error:&error];
@@ -171,7 +171,7 @@ didFinishDownloadingToURL:(NSURL *)location {
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
     if (error){
-        KNB_WS(weakSelf);
+        kWeakSelf(weakSelf);
         XHLaunchAdLog(@"error = %@",error);
         dispatch_async(dispatch_get_main_queue(), ^{
             if (weakSelf.completedBlock) {
