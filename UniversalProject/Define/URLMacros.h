@@ -25,29 +25,21 @@
  */
 
 // 环境配置 0：本地测试 1:正式环境 2:线上测试
+#define ENV_CONFIG_TYPE 0
 
-#define DevelopSever    1
-#define TestSever       0
-#define ProductSever    0
-
-#if DevelopSever
-
-/**开发服务器*/
-#define URL_main @"http://192.168.20.31:20000/shark-miai-service"
-//#define URL_main @"http://192.168.11.122:8090" //展鹏
-
-#elif TestSever
-
-/**测试服务器*/
-#define URL_main @"http://192.168.20.31:20000/shark-miai-service"
-
-#elif ProductSever
-
-/**生产服务器*/
-#define URL_main @"http://192.168.20.31:20000/shark-miai-service"
+#if (ENV_CONFIG_TYPE == 0)
+/**本地测试*/
+#define URL_main @"http://182.92.222.152:90/index.php"
+#define IMAGE_header @"http://182.92.222.152:90"
+#elif (ENV_CONFIG_TYPE == 1)
+/**线上正式*/
+#define URL_main @"http://182.92.222.152:90/index.php"
+#define IMAGE_header @"http://182.92.222.152:90"
+#else
+/**线上测试*/
+#define URL_main @"http://182.92.222.152:90/index.php"
+#define IMAGE_header @"http://182.92.222.152:90"
 #endif
-
-
 
 #pragma mark - ——————— 详细接口地址 ————————
 

@@ -74,11 +74,23 @@
 #define kISIPHONEX ((IS_IPHONE_X == YES || IS_IPHONE_XR == YES || IS_IPHONE_Xs_Max == YES) ? YES : NO)
 
 //-------------------打印日志-------------------------
-//DEBUG  模式下打印日志,当前行
-#ifdef DEBUG
-#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
-#else
+/**
+ *  工程全局环境控制
+ *
+ *  0:开发环境  1:发布环境
+ */
+#if (ENV_CONFIG_TYPE == 0)
+#define DLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define DeBugLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define NSLog(...) NSLog(__VA_ARGS__);
+#define MyNSLog(FORMAT, ...) fprintf(stderr,"[%s]:[line %d行] %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#endif
+
+#if (ENV_CONFIG_TYPE == 1)
 #define DLog(...)
+#define DeBugLog(...)
+#define NSLog(...)
+#define MyNSLog(FORMAT, ...) nil
 #endif
 
 //拼接字符串

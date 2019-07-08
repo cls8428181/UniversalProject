@@ -178,6 +178,8 @@
 		185FBF02229D59AA00C351A6 /* GHDropMenuFilterSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBEAD229D59AA00C351A6 /* GHDropMenuFilterSectionHeader.m */; };
 		185FBF03229D59AA00C351A6 /* WSLWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBEB1229D59AA00C351A6 /* WSLWaterFlowLayout.m */; };
 		185FBF04229D59AA00C351A6 /* CustomIOSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBEB5229D59AA00C351A6 /* CustomIOSAlertView.m */; };
+		18E802C322D2E20800307007 /* CCKeychainTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E802BE22D2E20800307007 /* CCKeychainTool.m */; };
+		18E802C422D2E20800307007 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E802C122D2E20800307007 /* KxMenu.m */; };
 		5360FB7B39DF4A1507ECAD22 /* libPods-UniversalProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD1E6E367053D29D17BC0B5 /* libPods-UniversalProject.a */; };
 		961C054B229D8341009C14C6 /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C0545229D8340009C14C6 /* ShareView.m */; };
 		961C054C229D8341009C14C6 /* ImageWithLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C0549229D8340009C14C6 /* ImageWithLabels.m */; };
@@ -562,6 +564,10 @@
 		185FBEB2229D59AA00C351A6 /* WSLWaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLWaterFlowLayout.h; sourceTree = "<group>"; };
 		185FBEB4229D59AA00C351A6 /* CustomIOSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOSAlertView.h; sourceTree = "<group>"; };
 		185FBEB5229D59AA00C351A6 /* CustomIOSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOSAlertView.m; sourceTree = "<group>"; };
+		18E802BE22D2E20800307007 /* CCKeychainTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCKeychainTool.m; sourceTree = "<group>"; };
+		18E802BF22D2E20800307007 /* CCKeychainTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCKeychainTool.h; sourceTree = "<group>"; };
+		18E802C122D2E20800307007 /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
+		18E802C222D2E20800307007 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
 		2AA6546B22B827B07DFFE349 /* Pods-UniversalProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversalProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UniversalProjectTests/Pods-UniversalProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DC98D48DAE5120CF5E11288 /* Pods-UniversalProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversalProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-UniversalProjectTests/Pods-UniversalProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F371EEAA1D46CD25F5F9CAE /* libPods-UniversalProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UniversalProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1062,6 +1068,8 @@
 		185FBD32229D518500C351A6 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				18E802BD22D2E20800307007 /* CCKeychainTool */,
+				18E802C022D2E20800307007 /* KxMenu */,
 				184E2C44229E86B1004FE4F9 /* AES */,
 				184E2C40229E8643004FE4F9 /* OpenUDID */,
 				184E2C36229E85A6004FE4F9 /* NetWork */,
@@ -1683,6 +1691,24 @@
 			path = CustomAlert;
 			sourceTree = "<group>";
 		};
+		18E802BD22D2E20800307007 /* CCKeychainTool */ = {
+			isa = PBXGroup;
+			children = (
+				18E802BE22D2E20800307007 /* CCKeychainTool.m */,
+				18E802BF22D2E20800307007 /* CCKeychainTool.h */,
+			);
+			path = CCKeychainTool;
+			sourceTree = "<group>";
+		};
+		18E802C022D2E20800307007 /* KxMenu */ = {
+			isa = PBXGroup;
+			children = (
+				18E802C122D2E20800307007 /* KxMenu.m */,
+				18E802C222D2E20800307007 /* KxMenu.h */,
+			);
+			path = KxMenu;
+			sourceTree = "<group>";
+		};
 		66E7632F454F57DE420C671F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2102,6 +2128,7 @@
 				185FBF02229D59AA00C351A6 /* GHDropMenuFilterSectionHeader.m in Sources */,
 				185FBDDF229D588200C351A6 /* UIImage+WaterMark.m in Sources */,
 				185FBECF229D59AA00C351A6 /* EXTRuntimeExtensions.m in Sources */,
+				18E802C422D2E20800307007 /* KxMenu.m in Sources */,
 				185FBEFF229D59AA00C351A6 /* GHDropMenuFilterInputItem.m in Sources */,
 				185FBD40229D570500C351A6 /* KNBMainConfigModel.m in Sources */,
 				184E2BBA229E5D47004FE4F9 /* UserInfo.m in Sources */,
@@ -2131,6 +2158,7 @@
 				185FBEBF229D59AA00C351A6 /* XHLaunchAdDownloader.m in Sources */,
 				185FBEF0229D59AA00C351A6 /* SDCollectionViewCell.m in Sources */,
 				185FBECD229D59AA00C351A6 /* HMSegmentedControl.m in Sources */,
+				18E802C322D2E20800307007 /* CCKeychainTool.m in Sources */,
 				185FBEE1229D59AA00C351A6 /* BRTagsPickerView.m in Sources */,
 				961C054B229D8341009C14C6 /* ShareView.m in Sources */,
 				185FBDD0229D588200C351A6 /* UIButton+Indicator.m in Sources */,
