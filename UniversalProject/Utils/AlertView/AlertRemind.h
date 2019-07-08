@@ -1,5 +1,5 @@
 //
-//  KNBAlertRemind.h
+//  AlertRemind.h
 //  KenuoTraining
 //
 //  Created by 妖狐小子 on 2017/2/17.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface KNBAlertRemind : NSObject
+@interface AlertRemind : NSObject
 
 + (instancetype)sharedInstance;
 

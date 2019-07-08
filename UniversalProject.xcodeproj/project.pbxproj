@@ -46,7 +46,7 @@
 		184E2C5C229E9038004FE4F9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E2C5B229E9038004FE4F9 /* libz.tbd */; };
 		184E2C5E229E90E1004FE4F9 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E2C5D229E90E1004FE4F9 /* Photos.framework */; };
 		184E2C60229E90F2004FE4F9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E2C5F229E90F2004FE4F9 /* ImageIO.framework */; };
-		184E2C64229E98DB004FE4F9 /* KNBAlertRemind.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2C63229E98DB004FE4F9 /* KNBAlertRemind.m */; };
+		184E2C64229E98DB004FE4F9 /* AlertRemind.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2C63229E98DB004FE4F9 /* AlertRemind.m */; };
 		185FBCF6229D2CCF00C351A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBCF5229D2CCF00C351A6 /* AppDelegate.m */; };
 		185FBCFF229D2CCF00C351A6 /* UniversalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 185FBCFD229D2CCF00C351A6 /* UniversalProject.xcdatamodeld */; };
 		185FBD01229D2CD100C351A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185FBD00229D2CD100C351A6 /* Assets.xcassets */; };
@@ -56,7 +56,7 @@
 		185FBD1C229D2CD100C351A6 /* UniversalProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD1B229D2CD100C351A6 /* UniversalProjectUITests.m */; };
 		185FBD38229D54AA00C351A6 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD35229D54AA00C351A6 /* AppDelegate+AppService.m */; };
 		185FBD39229D54AA00C351A6 /* AppDelegate+PushService.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD36229D54AA00C351A6 /* AppDelegate+PushService.m */; };
-		185FBD40229D570500C351A6 /* KNBMainConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD3F229D570500C351A6 /* KNBMainConfigModel.m */; };
+		185FBD40229D570500C351A6 /* MainConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD3F229D570500C351A6 /* MainConfigModel.m */; };
 		185FBD55229D585900C351A6 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD42229D585800C351A6 /* BaseModel.m */; };
 		185FBD56229D585900C351A6 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD43229D585800C351A6 /* BaseWebViewController.m */; };
 		185FBD57229D585900C351A6 /* KNOCJSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185FBD45229D585800C351A6 /* KNOCJSModel.m */; };
@@ -211,7 +211,7 @@
 		9686BFF2229D793000524A6D /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFD9229D793000524A6D /* 1.jpg */; };
 		9686BFF3229D793000524A6D /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9686BFDA229D793000524A6D /* 0.jpg */; };
 		9686BFF6229D7AF900524A6D /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686BFF4229D7AF800524A6D /* CityModel.m */; };
-		9686BFFA229D7BB400524A6D /* KNBNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686BFF9229D7BB400524A6D /* KNBNavigationView.m */; };
+		9686BFFA229D7BB400524A6D /* NavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686BFF9229D7BB400524A6D /* NavigationView.m */; };
 		C39990061A1F8378A2B49AB8 /* libPods-UniversalProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F371EEAA1D46CD25F5F9CAE /* libPods-UniversalProjectTests.a */; };
 /* End PBXBuildFile section */
 
@@ -297,8 +297,8 @@
 		184E2C5B229E9038004FE4F9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		184E2C5D229E90E1004FE4F9 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		184E2C5F229E90F2004FE4F9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		184E2C62229E98D4004FE4F9 /* KNBAlertRemind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBAlertRemind.h; sourceTree = "<group>"; };
-		184E2C63229E98DB004FE4F9 /* KNBAlertRemind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBAlertRemind.m; sourceTree = "<group>"; };
+		184E2C62229E98D4004FE4F9 /* AlertRemind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertRemind.h; sourceTree = "<group>"; };
+		184E2C63229E98DB004FE4F9 /* AlertRemind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertRemind.m; sourceTree = "<group>"; };
 		185FBCF1229D2CCF00C351A6 /* UniversalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniversalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185FBCF4229D2CCF00C351A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		185FBCF5229D2CCF00C351A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -319,8 +319,8 @@
 		185FBD37229D54AA00C351A6 /* AppDelegate+AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppService.h"; sourceTree = "<group>"; };
 		185FBD3B229D55D100C351A6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		185FBD3C229D560D00C351A6 /* UtilsExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UtilsExtend.h; path = "UniversalProject/Supporting Flies/UtilsExtend.h"; sourceTree = SOURCE_ROOT; };
-		185FBD3E229D570500C351A6 /* KNBMainConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBMainConfigModel.h; sourceTree = "<group>"; };
-		185FBD3F229D570500C351A6 /* KNBMainConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBMainConfigModel.m; sourceTree = "<group>"; };
+		185FBD3E229D570500C351A6 /* MainConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainConfigModel.h; sourceTree = "<group>"; };
+		185FBD3F229D570500C351A6 /* MainConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainConfigModel.m; sourceTree = "<group>"; };
 		185FBD41229D585800C351A6 /* KNOCJSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNOCJSModel.h; sourceTree = "<group>"; };
 		185FBD42229D585800C351A6 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		185FBD43229D585800C351A6 /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
@@ -623,8 +623,8 @@
 		9686BFDA229D793000524A6D /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 		9686BFF4229D7AF800524A6D /* CityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityModel.m; sourceTree = "<group>"; };
 		9686BFF5229D7AF900524A6D /* CityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModel.h; sourceTree = "<group>"; };
-		9686BFF8229D7BB400524A6D /* KNBNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBNavigationView.h; sourceTree = "<group>"; };
-		9686BFF9229D7BB400524A6D /* KNBNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBNavigationView.m; sourceTree = "<group>"; };
+		9686BFF8229D7BB400524A6D /* NavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationView.h; sourceTree = "<group>"; };
+		9686BFF9229D7BB400524A6D /* NavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationView.m; sourceTree = "<group>"; };
 		AE5248397A7C09B94F6A3EB2 /* Pods-UniversalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniversalProject/Pods-UniversalProject.release.xcconfig"; sourceTree = "<group>"; };
 		D9D916819319E797D718D4D7 /* Pods-UniversalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversalProject.release.xcconfig"; path = "Target Support Files/Pods-UniversalProject/Pods-UniversalProject.release.xcconfig"; sourceTree = "<group>"; };
 		FC01429CD4416909EB37399C /* Pods-UniversalProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversalProjectTests.release.xcconfig"; path = "Target Support Files/Pods-UniversalProjectTests/Pods-UniversalProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -890,8 +890,8 @@
 		184E2C61229E98BA004FE4F9 /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
-				184E2C62229E98D4004FE4F9 /* KNBAlertRemind.h */,
-				184E2C63229E98DB004FE4F9 /* KNBAlertRemind.m */,
+				184E2C62229E98D4004FE4F9 /* AlertRemind.h */,
+				184E2C63229E98DB004FE4F9 /* AlertRemind.m */,
 			);
 			path = AlertView;
 			sourceTree = "<group>";
@@ -960,8 +960,8 @@
 				185FBD35229D54AA00C351A6 /* AppDelegate+AppService.m */,
 				185FBD34229D54AA00C351A6 /* AppDelegate+PushService.h */,
 				185FBD36229D54AA00C351A6 /* AppDelegate+PushService.m */,
-				185FBD3E229D570500C351A6 /* KNBMainConfigModel.h */,
-				185FBD3F229D570500C351A6 /* KNBMainConfigModel.m */,
+				185FBD3E229D570500C351A6 /* MainConfigModel.h */,
+				185FBD3F229D570500C351A6 /* MainConfigModel.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1058,7 +1058,7 @@
 			children = (
 				184E2C61229E98BA004FE4F9 /* AlertView */,
 				961C055C229D8BEE009C14C6 /* KNBGuidePage */,
-				9686BFF7229D7BB400524A6D /* KNBNavigationView */,
+				9686BFF7229D7BB400524A6D /* NavigationView */,
 				185FBD33229D519B00C351A6 /* Category */,
 				185FBD32229D518500C351A6 /* Library */,
 			);
@@ -1752,10 +1752,10 @@
 		961C055C229D8BEE009C14C6 /* KNBGuidePage */ = {
 			isa = PBXGroup;
 			children = (
-				961C055D229D8BEE009C14C6 /* KNBStartPageView.h */,
-				961C055E229D8BEE009C14C6 /* KNBStartPageView.xib */,
 				961C055F229D8BEE009C14C6 /* KNBStartPage.plist */,
+				961C055D229D8BEE009C14C6 /* KNBStartPageView.h */,
 				961C0560229D8BEE009C14C6 /* KNBStartPageView.m */,
+				961C055E229D8BEE009C14C6 /* KNBStartPageView.xib */,
 			);
 			path = KNBGuidePage;
 			sourceTree = "<group>";
@@ -1837,13 +1837,13 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		9686BFF7229D7BB400524A6D /* KNBNavigationView */ = {
+		9686BFF7229D7BB400524A6D /* NavigationView */ = {
 			isa = PBXGroup;
 			children = (
-				9686BFF8229D7BB400524A6D /* KNBNavigationView.h */,
-				9686BFF9229D7BB400524A6D /* KNBNavigationView.m */,
+				9686BFF8229D7BB400524A6D /* NavigationView.h */,
+				9686BFF9229D7BB400524A6D /* NavigationView.m */,
 			);
-			path = KNBNavigationView;
+			path = NavigationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2123,19 +2123,19 @@
 				185FBDCE229D588200C351A6 /* KNBButton.m in Sources */,
 				185FBDDB229D588200C351A6 /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				185FBDD5229D588200C351A6 /* UIResponder+Router.m in Sources */,
-				9686BFFA229D7BB400524A6D /* KNBNavigationView.m in Sources */,
+				9686BFFA229D7BB400524A6D /* NavigationView.m in Sources */,
 				185FBDCC229D588200C351A6 /* UIButton+ImageAndTitle.m in Sources */,
 				185FBF02229D59AA00C351A6 /* GHDropMenuFilterSectionHeader.m in Sources */,
 				185FBDDF229D588200C351A6 /* UIImage+WaterMark.m in Sources */,
 				185FBECF229D59AA00C351A6 /* EXTRuntimeExtensions.m in Sources */,
 				18E802C422D2E20800307007 /* KxMenu.m in Sources */,
 				185FBEFF229D59AA00C351A6 /* GHDropMenuFilterInputItem.m in Sources */,
-				185FBD40229D570500C351A6 /* KNBMainConfigModel.m in Sources */,
+				185FBD40229D570500C351A6 /* MainConfigModel.m in Sources */,
 				184E2BBA229E5D47004FE4F9 /* UserInfo.m in Sources */,
 				185FBDCF229D588200C351A6 /* UIButton+EnlargeArea.m in Sources */,
 				185FBEBB229D59AA00C351A6 /* XHLaunchImageView.m in Sources */,
 				185FBD07229D2CD100C351A6 /* main.m in Sources */,
-				184E2C64229E98DB004FE4F9 /* KNBAlertRemind.m in Sources */,
+				184E2C64229E98DB004FE4F9 /* AlertRemind.m in Sources */,
 				185FBEE8229D59AA00C351A6 /* BRAddressPickerView.m in Sources */,
 				9686BFE1229D793000524A6D /* PersonModel.m in Sources */,
 				185FBEF9229D59AA00C351A6 /* UIView+Extension.m in Sources */,

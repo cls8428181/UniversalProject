@@ -1,5 +1,5 @@
 //
-//  KNBMainConfigModel.h
+//  MainConfigModel.h
 //  KenuoTraining
 //
 //  Created by Robert on 16/2/29.
@@ -8,7 +8,7 @@
 
 #import "BaseModel.h"
 
-@interface KNBMainConfigModel : NSObject
+@interface MainConfigModel : NSObject
 
 // 启动广告图url
 @property (nonatomic, copy) NSString *launch_adPhotoUrl;

@@ -7,7 +7,7 @@
 //
 
 #import <YTKRequest.h>
-#import "KNBMainConfigModel.h"
+#import "MainConfigModel.h"
 
 /**
  接口请求基类，所有请求必须继承此类

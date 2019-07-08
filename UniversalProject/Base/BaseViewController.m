@@ -224,9 +224,9 @@
     return _collectionView;
 }
 
-- (KNBNavigationView *)naviView {
+- (NavigationView *)naviView {
     if (!_naviView) {
-        _naviView = [[KNBNavigationView alloc] init];
+        _naviView = [[NavigationView alloc] init];
     }
     return _naviView;
 }

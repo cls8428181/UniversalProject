@@ -1,5 +1,5 @@
 //
-//  KNBMainConfigModel.m
+//  MainConfigModel.m
 //  KenuoTraining
 //
 //  Created by Robert on 16/2/29.
@@ -7,9 +7,9 @@
 //
 
 
-#import "KNBMainConfigModel.h"
+#import "MainConfigModel.h"
 
-@interface KNBMainConfigModel ()
+@interface MainConfigModel ()
 
 @property (nonatomic, strong) NSDictionary *mainConfigDic;
 //主配置接口dict
@@ -20,9 +20,9 @@
 @end
 
 
-@implementation KNBMainConfigModel
+@implementation MainConfigModel
 
-SINGLETON_FOR_DEFAULT(KNBMainConfigModel);
+SINGLETON_FOR_DEFAULT(MainConfigModel);
 
 - (NSString *)getRequestUrlWithKey:(NSString *)key {
     NSString *url = [NSString stringWithFormat:@"%@%@",URL_main,key];;

@@ -1,19 +1,19 @@
 //
-//  KNBAlertRemind.m
+//  AlertRemind.m
 //  KenuoTraining
 //
 //  Created by 妖狐小子 on 2017/2/17.
 //  Copyright © 2017年 Robert. All rights reserved.
 //
 
-#import "KNBAlertRemind.h"
+#import "AlertRemind.h"
 #import "AppDelegate.h"
 
 
-@implementation KNBAlertRemind
+@implementation AlertRemind
 
 + (instancetype)sharedInstance {
-    static KNBAlertRemind *instance;
+    static AlertRemind *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];

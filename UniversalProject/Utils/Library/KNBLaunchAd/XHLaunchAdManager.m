@@ -10,7 +10,7 @@
 #import "XHLaunchAdManager.h"
 #import "XHLaunchAd.h"
 #import "BaseWebViewController.h"
-#import "KNBMainConfigModel.h"
+#import "MainConfigModel.h"
 #import "AppDelegate.h"
 
 @interface XHLaunchAdManager()<XHLaunchAdDelegate>
@@ -34,7 +34,7 @@
         //在UIApplicationDidFinishLaunching时初始化开屏广告,做到对业务层无干扰,当然你也可以直接在AppDelegate didFinishLaunchingWithOptions方法中初始化
         [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidFinishLaunchingNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
             //初始化开屏广告
-            if (!isNullStr([KNBMainConfigModel shareInstance].launch_adPhotoUrl)) {
+            if (!isNullStr([MainConfigModel shareInstance].launch_adPhotoUrl)) {
                  [self setupXHLaunchAd];
             }
         }];
@@ -56,7 +56,7 @@
     //广告停留时间
     imageAdconfiguration.duration = 5.0;
     //广告图片URLString/或本地图片名(.jpg/.gif请带上后缀)
-    imageAdconfiguration.imageNameOrURLString = [KNBMainConfigModel shareInstance].launch_adPhotoUrl;
+    imageAdconfiguration.imageNameOrURLString = [MainConfigModel shareInstance].launch_adPhotoUrl;
     //设置GIF动图是否只循环播放一次(仅对动图设置有效)
     imageAdconfiguration.GIFImageCycleOnce = NO;
     //缓存机制(仅对网络图片有效)
@@ -65,7 +65,7 @@
     //图片填充模式
     imageAdconfiguration.contentMode = UIViewContentModeScaleAspectFit;
     //广告点击打开页面参数(openModel可为NSString,模型,字典等任意类型)
-    imageAdconfiguration.openModel = [KNBMainConfigModel shareInstance].launch_adJumpUrl;
+    imageAdconfiguration.openModel = [MainConfigModel shareInstance].launch_adJumpUrl;
     //广告显示完成动画
     imageAdconfiguration.showFinishAnimate = ShowFinishAnimateLite;
     //广告显示完成动画时间
@@ -95,8 +95,8 @@
  广告点击事件回调
  */
 -(void)xhLaunchAd:(XHLaunchAd *)launchAd clickAndOpenModel:(id)openModel clickPoint:(CGPoint)clickPoint{
-    NSString *linkUrl = [KNBMainConfigModel shareInstance].launch_adJumpUrl;
-//    NSString *title = [KNBMainConfigModel shareInstance].launch_adName;
+    NSString *linkUrl = [MainConfigModel shareInstance].launch_adJumpUrl;
+//    NSString *title = [MainConfigModel shareInstance].launch_adName;
     if (!isNullStr(linkUrl)) {
         BaseWebViewController *webVC = [[BaseWebViewController alloc] init];
         webVC.url = linkUrl;

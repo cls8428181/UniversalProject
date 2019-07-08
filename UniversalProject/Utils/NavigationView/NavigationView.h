@@ -1,5 +1,5 @@
 //
-//  KNBNavigationView.h
+//  NavigationView.h
 //  KenuoTraining
 //
 //  Created by 妖狐小子 on 2017/4/12.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface KNBNavigationView : UIView
+@interface NavigationView : UIView
 
 /**
  导航title

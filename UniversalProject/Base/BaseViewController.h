@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MJRefresh.h"
-#import "KNBNavigationView.h"
+#import "NavigationView.h"
 
 typedef void (^KNMJFooterLoadCompleteBlock)(NSInteger page);
 typedef void (^KNMJHeaderLoadCompleteBlock)(NSInteger page);
@@ -26,7 +26,7 @@ typedef void (^KNMJHeaderLoadCompleteBlock)(NSInteger page);
 @property (nonatomic, strong) UICollectionView * collectionView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, assign) NSInteger requestPage; //加载页数
-@property (nonatomic, strong) KNBNavigationView *naviView;
+@property (nonatomic, strong) NavigationView *naviView;
 /**
  *  显示没有数据页面
  */

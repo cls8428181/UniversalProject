@@ -40,7 +40,7 @@
             KNBLoginViewController *logInVC = [[KNBLoginViewController alloc] init];
             UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:logInVC];
             [kAppDelegate.navController presentViewController:navigationVC animated:YES completion:nil];
-            //        [KNBAlertRemind alterWithTitle:@"提示" message:@"登录信息已失效,请重新登录" buttonTitles:@[ @"知道了" ] handler:^(NSInteger index, NSString *title){
+            //        [AlertRemind alterWithTitle:@"提示" message:@"登录信息已失效,请重新登录" buttonTitles:@[ @"知道了" ] handler:^(NSInteger index, NSString *title){
             //
             //        }];
             return;

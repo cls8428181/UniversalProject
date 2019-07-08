@@ -8,7 +8,7 @@
 
 #import "BaseRequest.h"
 #import "BaseRequestAccessory.h"
-#import "KNBMainConfigModel.h"
+#import "MainConfigModel.h"
 #import "NSString+MD5.h"
 #import "LocationManager.h"
 #import "HeaderModel.h"
@@ -141,7 +141,7 @@
 //baseMuDic
 //- (NSDictionary *)appendSecretDic {
 //    NSString *jsonStr = [BaseRequest changeJsonStr:self.baseMuDic];
-////    NSString *saltKey = [[KNBMainConfigModel sharedKNBMainConfigModel] getRequestUrlWithKey:KNB_SecretSalt];
+////    NSString *saltKey = [[MainConfigModel sharedMainConfigModel] getRequestUrlWithKey:KNB_SecretSalt];
 ////    NSString *saltStr = [NSString stringWithFormat:@"%@%@%@", saltKey, jsonStr, saltKey];
 ////    NSString *sign = [saltStr MD5];
 ////    NSDictionary *dic = @{ @"sign" : sign,
