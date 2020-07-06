@@ -2397,7 +2397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5T4H25QLTN;
+				DEVELOPMENT_TEAM = NJNULN45M9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UniversalProject/Utils/Library/UMSocial/UMSocialUI",
@@ -2431,7 +2431,7 @@
 					"$(PROJECT_DIR)/UniversalProject/ThridParty/UMSocial/SocialLibraries/SMS",
 					"$(PROJECT_DIR)/UniversalProject/ThridParty/UMSocial/SocialLibraries/Sina",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.winfoc.UniversalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.winfoc.MyLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}  ";
@@ -2444,7 +2444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5T4H25QLTN;
+				DEVELOPMENT_TEAM = NJNULN45M9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UniversalProject/Utils/Library/UMSocial/UMSocialUI",
@@ -2478,7 +2478,7 @@
 					"$(PROJECT_DIR)/UniversalProject/ThridParty/UMSocial/SocialLibraries/SMS",
 					"$(PROJECT_DIR)/UniversalProject/ThridParty/UMSocial/SocialLibraries/Sina",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.winfoc.UniversalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.winfoc.MyLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}  ";

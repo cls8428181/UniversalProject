@@ -6,16 +6,16 @@
 //  Copyright © 2017年 Robert. All rights reserved.
 //
 
-#import "KNBNavigationView.h"
+#import "NavigationView.h"
 #import "NSString+Size.h"
 
-@interface KNBNavigationView ()
+@interface NavigationView ()
 
 @property (nonatomic, strong) UIView *lineView;
 
 @end
 
-@implementation KNBNavigationView
+@implementation NavigationView
 
 - (instancetype)init {
     return [self initWithFrame:CGRectMake(0, 0, KScreenWidth, kNavBarHeight)];
